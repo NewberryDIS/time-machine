@@ -1,0 +1,8 @@
+export const debordpic = require('./debord.png')
+export const deleuzepic = require('./deleuze.png')
+export const amyWingreenpic = require('./tr-amyWingreen.png')
+export const blackHawkpic = require('./tr-blackHawk.png')
+export const errettGrahampic = require('./tr-errettGraham.png')
+export const josephWhitehousepic = require('./tr-josephWhitehouse.png')
+export const juliaNewberrypic = require('./tr-juliaNewberry.png')
+export const wolfejpic = require('./wolfej.png')
