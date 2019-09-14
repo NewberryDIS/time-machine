@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/time-machine/static/css/main.607799c5.chunk.css",
+    "main.js": "/time-machine/static/js/main.b59c42db.chunk.js",
+    "main.js.map": "/time-machine/static/js/main.b59c42db.chunk.js.map",
+    "runtime~main.js": "/time-machine/static/js/runtime~main.b0aaa881.js",
+    "runtime~main.js.map": "/time-machine/static/js/runtime~main.b0aaa881.js.map",
+    "static/js/2.c539916d.chunk.js": "/time-machine/static/js/2.c539916d.chunk.js",
+    "static/js/2.c539916d.chunk.js.map": "/time-machine/static/js/2.c539916d.chunk.js.map",
+    "index.html": "/time-machine/index.html",
+    "precache-manifest.9d81ac7e69ff25a72618e612c2bb6014.js": "/time-machine/precache-manifest.9d81ac7e69ff25a72618e612c2bb6014.js",
+    "service-worker.js": "/time-machine/service-worker.js",
+    "static/css/main.607799c5.chunk.css.map": "/time-machine/static/css/main.607799c5.chunk.css.map",
+    "static/media/Newberry_N.svg": "/time-machine/static/media/Newberry_N.9d386151.svg",
+    "static/media/debord.png": "/time-machine/static/media/debord.2ecf8589.png",
+    "static/media/deleuze.png": "/time-machine/static/media/deleuze.74a8f8b2.png",
+    "static/media/logow.svg": "/time-machine/static/media/logow.713591bf.svg",
+    "static/media/mtm-index-2-t.png": "/time-machine/static/media/mtm-index-2-t.6cc9d592.png",
+    "static/media/time-machine-splash-background.jpg": "/time-machine/static/media/time-machine-splash-background.f29758d7.jpg",
+    "static/media/tr-amyWingreen.png": "/time-machine/static/media/tr-amyWingreen.d24cb7c2.png",
+    "static/media/tr-blackHawk.png": "/time-machine/static/media/tr-blackHawk.198be459.png",
+    "static/media/tr-errettGraham.png": "/time-machine/static/media/tr-errettGraham.67dc3d63.png",
+    "static/media/tr-josephWhitehouse.png": "/time-machine/static/media/tr-josephWhitehouse.ebd1b5a5.png",
+    "static/media/tr-juliaNewberry.png": "/time-machine/static/media/tr-juliaNewberry.c4c6843d.png",
+    "static/media/wolfej.png": "/time-machine/static/media/wolfej.2dc14d0c.png",
+    "static/media/wp.png": "/time-machine/static/media/wp.219c1227.png"
+  }
+}
