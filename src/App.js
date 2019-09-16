@@ -14,7 +14,7 @@ import wp from './images/wp.png';
 import { css, jsx } from '@emotion/core'
 
 const App = () => {
-	const [mode, setMode] = useState(true);
+	const [mode, setMode] = useState(false);
 	const toggle = () => setMode(!mode)
 	const Main = mode ? Mainone : Maintwo
 	const Choose = mode ? Chooseone : Choosetwo

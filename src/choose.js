@@ -15,6 +15,12 @@ import deleuze from './images/deleuze.png';
 import wp from './images/wp.png';
 
 
+const colors = {
+    dark: '#27452B',
+    darkrgba: '39,69,43', 
+    light: '#D6D7B5',
+    lightrgba: '214,215,181'
+}
 let breakPoints = [350, 500, 750];
 const images = {
     'amyWingreen': amyWingreen,
@@ -80,6 +86,8 @@ const Tile = ({ content }) =>
         <img css={css`
                 padding: 25px 25px 5px 25px;
                 width: 150px;
+
+                filter: drop-shadow(0 0 0.75rem ${colors.dark});
             `} 
             src={images[content['image']]} alt="person"/>
         <h2 css={css`font-family: 'Libre Baskerville', serif;`}>{content.name}</h2>

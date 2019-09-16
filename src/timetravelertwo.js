@@ -16,6 +16,19 @@ import wolfejpic from './images/wolfej.png';
 import bg from './images/time-machine-splash-background.jpg';
 
 
+// const colors = {
+//     dark: '#27452B',
+//     darkrgba: '39,69,43', 
+//     light: '#D6D7B5',
+//     lightrgba: '214,215,181'
+// }
+const colors = {
+    dark: '#000',
+    darkrgba: '0,0,0', 
+    light: '#fff',
+    lightrgba: '255,255,255'
+}
+
 const Travelerlayout = styled.div`
     display: flex;
     align-items: stretch;
@@ -66,7 +79,7 @@ const Leftpanel = ( props ) => (
         color: #e8e9ca;
     `}>
         <div  css={css`width: 80%; margin: 40% auto;`} >
-            <img css={css`display: block; margin: auto; max-width: 150px;`} src={images[props.content]} />
+            <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem ${colors.dark});`} src={images[props.content]} />
             <p css={css`padding-top: 35px; font-size: 2rem; font-family: 'Libre Baskerville',serif;`} >{people[props.content].name}</p>
             <p>{people[props.content].desc}</p>
         </div>
