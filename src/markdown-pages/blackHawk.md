@@ -1,0 +1,6 @@
+---
+path: '/blackHawk'
+image: 'blackHawk'
+title: 'The War Chief: Black Hawk'
+text: 'A leader of the Sauk people, Black Hawk battled both rival tribes and the white settlers invading his land. After teaming with the British in the War of 1812 and with the Fox tribe in the Black Hawk War, he surrendered to U.S. forces in 1832.'
+---
