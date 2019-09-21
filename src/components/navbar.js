@@ -15,8 +15,9 @@ const Navchunk = styled.div`
     font-family: 'Lato', sans-serif;
     display: flex;
     transition: all .15s ease-in-out;
-    & span {
+    & a {
         transition: all .15s ease-in-out;
+        text-decoration: none;
     }
     &:hover {
         -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
@@ -24,7 +25,7 @@ const Navchunk = styled.div`
         box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
         border: 2px solid white;
         background: rgba(0,0,0,0.65);
-        & span {
+        & a {
             color: white;
         }
         &.navleft img {
@@ -65,24 +66,25 @@ export default class Navbar extends React.Component {
                         <Navchunk onClick={this.props.handleClick} className="navleft" css={css`
                             position: relative;
                         `}>
-                            <div >
-                                <img alt="Newberry Logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-                                <span css={css`
-                                    flex: 3;
-                                    position: absolute;
-                                    top: 0;
-                                    bottom: 0;
-                                    left: 60px;
-                                    right: 0;
-                                    height: 30%;
-                                    margin: auto;
-                                    color: rgba(0,0,0,0);
-                                    vertical-align: middle;
-                                    height: 40px;
-                                    line-height: 40px;
+                            <div css={css`padding: 0 7px;`}>
+                                <a href="http://www.newberry.org"><img alt="Newberry Logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></a>
+                                <a href="http://www.newberry.org/digital-newberry/"
+                                    css={css`
+                                        flex: 3;
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        left: 60px;
+                                        right: 0;
+                                        height: 30%;
+                                        margin: auto;
+                                        color: rgba(0,0,0,0);
+                                        vertical-align: middle;
+                                        height: 40px;
+                                        line-height: 40px;
                                     `}>
                                     &gt; Digital Newberry
-                                </span>
+                                </a>
                             </div>
                         </Navchunk>
                         

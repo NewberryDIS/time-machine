@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 /** @jsx jsx */
 import { css, jsx, Global } from '@emotion/core'
 import styled from "@emotion/styled";
@@ -8,12 +8,14 @@ import Navbar from '../components/navbar';
 
 import debordpic from '../images/debord.png';
 import deleuzepic from '../images/deleuze.png';
-import amyWingreenpic from '../images/tr-amyWingreen.png';
-import blackHawkpic from '../images/tr-blackHawk.png';
-import errettGrahampic from '../images/tr-errettGraham.png';
-import josephWhitehousepic from '../images/tr-josephWhitehouse.png';
-import juliaNewberrypic from '../images/tr-juliaNewberry.png';
+import amyWingreenpic from '../images/tm-amyWingreen.png';
+import blackHawkpic from '../images/tm-blackHawk.png';
+import errettGrahampic from '../images/tm-errettGraham.png';
+import josephWhitehousepic from '../images/tm-josephWhitehouse.png';
+import juliaNewberrypic from '../images/tm-juliaNewberry.png';
 import wolfejpic from '../images/wolfej.png';
+import jhMageepic from '../images/tm-jhMagee.png';
+import eraBellThompsonpic from '../images/tm-eraBellThompson.png';
 import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 
@@ -40,7 +42,9 @@ const images = {
     'josephWhitehouse': josephWhitehousepic,
     'wolfej': wolfejpic,
     'deleuze': deleuzepic,
-    'debord': debordpic
+    'debord': debordpic,
+    'jhMagee': jhMageepic,
+    'eraBellThompson': eraBellThompsonpic
 }
 const Maparea = styled.div` 
     flex: 1;
@@ -51,16 +55,44 @@ const Maparea = styled.div`
 `
 const Leftpanel = ( props ) => (
     <div css={css`
-        flex-basis: 25%;
+        flex-basis: 15%;
         background: #333;
-        height: 100%;
         color: #e8e9ca;
+        min-height: 100vh;
+        align-content: space-between;
+        display: flex;
+        flex-direction: column;
+        background-size: 100%;
+        background-attachment: fixed;
+
     `}>
-        <div css={css`width: 80%; margin: 40% auto;`} >
+        <div css={css`width: 80%; margin: 15% auto; flex: grow;`} >
             <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem ${props.colors.dark});`} src={images[props.image]} alt="" />
-            <p css={css`padding-top: 35px; font-size: 2rem; line-height: 2.25rem;font-family: 'Hepta Slab',serif;`} >{props.title}</p>
-            <p css={css`padding-top: 35px; font-family: 'Lato',sans-serif;`} >{props.text}</p>
+            <p css={css`padding-top: 35px; font-size: 1.5rem; line-height: 2.25rem;font-family: 'Hepta Slab',serif;`} >{props.title}</p>
+            <p css={css`padding-top: 35px; font-family: 'Lato',sans-serif;`} >{props.shorttext}</p>
         </div>
+        <Link css={css`
+                margin: 0 20px;
+                    font-family: 'Hepta Slab',serif;
+                    font-weight: 100;
+                    font-size: 1rem;
+                    color: ${props.colors.light};
+                    text-decoration: none;
+                padding: 15px 30px ;
+                border: 0;
+                &:hover {
+                    background-color: ${props.colors.light};
+                    -webkit-box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
+                    -moz-box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
+                    box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
+                        color: ${props.colors.dark};
+
+                }
+                background: rgba(${props.colors.darkrgba},0.15);
+                border-radius: 6px; 
+                flex-basis: 1rem;
+                text-align: center;
+        `} to="/choose">Swap Traveler</Link>
     </div>
 )
 export default function Template({
@@ -68,7 +100,6 @@ export default function Template({
     }) {
     const { markdownRemark } = data // data.markdownRemark holds our post data
     const { frontmatter } = markdownRemark
-    const [text, setText] = useState(true);
     const [colorState, setColorState] = useState(false);
     const toggle = () => setColorState(!colorState)
     let colors = colorState ? {
@@ -86,58 +117,34 @@ export default function Template({
         <div css={css`
             display: flex;
             align-items: stretch;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
         `} >
-        <Navbar handleClick={toggle} />
+            <Navbar handleClick={toggle} />
             <Global styles={css`
             @import url('https://fonts.googleapis.com/css?family=Bitter|Lato:100i,300i,400|Libre+Baskerville|BioRhyme:700|Hepta+Slab:400,700|Ultra:400,700&display=swap');
-
+                * {
+                    transition: all .15s ease-in-out;
+                }
                 body {
                     background: url('${colorState ? wpg : wpc}');
-                    background-position: center;
+                    // background-position: center;
                     background-size: cover;
+                    background-attachment: fixed;
                 }
             `} />
-            <Leftpanel image={frontmatter.image} text={frontmatter.text} title={frontmatter.title} colors={colors} />
+            <Leftpanel image={frontmatter.image} text={frontmatter.shorttext} title={frontmatter.title} colors={colors} />
             <Maparea>
-                <div css={css`
-                    height: 70%;
-                    width: 80%;
-                    display: flex;
-                    margin: auto;
-                    background-color: #333;
-                    -webkit-box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
-                    -moz-box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
-                    box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
-                    color:  #e8e9ca;
-                `}>
-                    <p css={css`
-                        width: 25%;
-                        height: 25%;
-                        display: block;
-                        margin: auto;`} >
-                        click "yes" if you think we should have some content in this box
-                        <br />
-                        <button css={css`
-                                border: 1px solid #e8e9ca;
-                                cursor: pointer;
-                                display: inline-block;
-                                width: 75px;
-                                padding:10px;
-                                color:  #e8e9ca;
-                                background: none;
-                                margin: 10px auto;`}
-                            onMouseEnter={() => setText(false)}
-                            onMouseLeave={() => setText(true)}>
-                            {text ? 'yes' : 'no' }
-                        </button>
-                    </p>
-                </div>
+                <iframe src={frontmatter.storymapurl}
+                    css={css`
+                        height: 70%;
+                        width: 80%;
+                        display: flex;
+                        margin: auto;
+                        background-color: #333;
+                        -webkit-box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
+                        box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
+                        color:  #e8e9ca;
+                    `} />
             </Maparea>
         </div>
     )
@@ -150,6 +157,8 @@ export const pageQuery = graphql`
             title
             text
             image
+            storymapurl
+            shorttext
         }
     }
 }

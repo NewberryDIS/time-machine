@@ -3,15 +3,14 @@ import { useState} from 'react';
 import { css, jsx, Global } from '@emotion/core';
 import styled from "@emotion/styled";
 import { Link } from "gatsby"
-
 import Navbar from '../components/navbar';
 import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 import fg from '../images/mtm-index-2-t.png';
-import amyWingreen from '../images/tr-amyWingreen.png';
-import blackHawk from '../images/tr-blackHawk.png';
-import errettGraham from '../images/tr-errettGraham.png';
-import juliaNewberry from '../images/tr-juliaNewberry.png';
+import amyWingreen from '../images/tm-amyWingreen.png';
+import blackHawk from '../images/tm-blackHawk.png';
+import errettGraham from '../images/tm-errettGraham.png';
+import juliaNewberry from '../images/tm-juliaNewberry.png';
 
 const Text  = styled.div`
     font-family: 'Lato', sans-serif;
@@ -38,7 +37,6 @@ const Title  = styled.p`
 const Circleimage  = styled.img`
     flex: 1;
     max-width: 150px;
-    transition: all .15s ease-in-out;
 `
 const Splash = styled.div`
     width: 60%; 
@@ -53,7 +51,11 @@ const Splash = styled.div`
     position: relative;
 `
 const Splashleft = styled.div`
+    align-content: space-between;
+    display: flex;
+    flex-direction: column;
     flex-basis: 70%;
+    height: 100%;
     @media (max-width: 1100px) {flex-basis: 80%;} 
     @media (max-width: 750px)  {flex-basis: auto;} 
 `
@@ -62,6 +64,8 @@ const Splashright = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    @media (max-width: 1100px) {width: 85%;} 
+    @media (max-width: 750px) {display: none;} 
 `
 const Halfground  = styled.div`
     position: absolute;
@@ -71,7 +75,6 @@ const Halfground  = styled.div`
     right: 0;
     z-index: -1;
     border-radius: 3px;
-    transition: all .15s ease-in-out;
     &:hover {
  
         background-attachment: fixed;
@@ -98,10 +101,17 @@ function Main() {
     return <div className="wrapper">
         <Navbar handleClick={toggle} />
         <Global styles={css`
+                    * {
+                        transition: all .15s ease-in-out;
+                    }
+                    html {
+                        height: 100vh;
+                    }
                     body {
                         background: url('${colorState ? wpg : wpc}');
                         background-position: center;
                         background-size: cover;
+                        background-attachment: fixed;
                     }
                     .title {
                         filter: drop-shadow(0 0 0.25rem ${colors.dark});
@@ -135,41 +145,69 @@ function Main() {
                             box-shadow: 10px 10px 35px 0px rgba(${colors.darkrgba},0.75);
                         }
                     }
+                    .newberry-transcribe {
+                        & a {
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 100;
+                            font-size: 1rem;
+                            color: black;
+                            text-decoration: none;
+                        }
+                        padding: 15px 30px ;
+                        border: 0;
+                        &:hover {
+                            background-color: ${colors.light};
+                            -webkit-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                            -moz-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                            box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                        }
+                        background: rgba(${colors.lightrgba},0);
+                        border-radius: 6px; 
+                        flex-basis: 1rem;
+                        text-align: center;
+                    }
+                    .textcontent {
+                        flex-grow: 1;
+                    }
                 `}
                 />
         <Splash>
             <Halfground className="halfground" />
             <Splashleft>
-                <Title className="upper title">Midwest</Title>
-                <Title className="lower title">Time Machine</Title>
-                <Text className="text">Come along for the ride with Midwesterners' first-hand accounts of historic events, including frontier expeditions, the Great Chicago Fire, and the 1893 World's Fair.</Text>
-                <Text className="text">With help from our volunteer transcribers, you can follow these journeys via historical documents from the Newberry's primary source collections.</Text>
-                <Link to="/choose/" css={css`
-                        text-align: center;
-                        text-decoration: none;
-                        display: table;
-                        margin: 15px auto;
-                        padding: 13px 20px;
-                        font-family: 'Hepta Slab',serif;
-                        font-weight: 900;
-                        background: ${colors.dark};
-                        transition: all .15s ease-in-out;
-                        color:  rgba(${colors.lightrgba},0.75) ;
-                        border-radius: 6px; 
-                        -webkit-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                        -moz-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                        box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                        text-transform: uppercase;
-                        &:hover {
-                            text-shadow: none;
-                            color: ${colors.light};
-                        }
-                        text-shadow:
+                <div className="textcontent">
+                    <Title className="upper title">Midwest</Title>
+                    <Title className="lower title">Time Machine</Title>
+                    <Text className="text">Travel to the past via first-hand accounts from letters, diaries, and rare books in the Newberry's collections</Text>
+                    <Text className="text">Witness the Chicago Fire, settle the frontier, and marvel at the World's Fair through manuscripts transcribed by our online volunteers!</Text>
+                    <Link to="/choose/" css={css`
+                            text-align: center;
+                            text-decoration: none;
+                            display: table;
+                            margin: 15px auto;
+                            padding: 13px 20px;
+                            font-family: 'Hepta Slab',serif;
+                            font-weight: 900;
+                            background: ${colors.dark};
+                            color:  rgba(${colors.lightrgba},0.75) ;
+                            border-radius: 6px; 
+                            -webkit-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                            -moz-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                            box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                            text-transform: uppercase;
+                            &:hover {
+                                text-shadow: none;
+                                color: ${colors.light};
+                            }
+                            text-shadow:
                             -1px -1px 0 ${colors.dark},  
-                             1px -1px 0 ${colors.dark},
-                             -1px 1px 0 ${colors.dark},
-                              1px 1px 0 ${colors.dark};
-                `}>Choose Your Time Traveler</Link>
+                            1px -1px 0 ${colors.dark},
+                            -1px 1px 0 ${colors.dark},
+                            1px 1px 0 ${colors.dark};
+                            `}>Choose Your Time Traveler</Link>
+                    </div>
+                    <div className="newberry-transcribe">
+                        <Link to="/intgs">Unlock more stories from the past at our transcription crowdsourcing project: NEWBERRY TRANSCRIBE</Link>
+                    </div>
             </Splashleft>
             <Splashright>
                 <Circleimage className="circleimage" src={ blackHawk } alt=""/>

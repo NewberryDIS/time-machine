@@ -1,6 +1,0 @@
----
-path: '/deleuze'
-image: 'deleuze'
-title: 'The One Guy: Gilles Deleuze'
-text: 'No light but the muted purring of the arcade showed him broken lengths of damp chipboard and the chassis of a gutted game console. No sound but the muted purring of the bright void beyond the chain link.'
----

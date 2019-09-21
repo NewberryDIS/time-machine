@@ -7,11 +7,13 @@ import { Link } from "gatsby"
 // images
 
 import Navbar from '../components/navbar';
-import amyWingreen from '../images/tr-amyWingreen.png';
-import blackHawk from '../images/tr-blackHawk.png';
-import errettGraham from '../images/tr-errettGraham.png';
-import josephWhitehouse from '../images/tr-josephWhitehouse.png';
-import juliaNewberry from '../images/tr-juliaNewberry.png';
+import amyWingreen from '../images/tm-amyWingreen.png';
+import blackHawk from '../images/tm-blackHawk.png';
+import errettGraham from '../images/tm-errettGraham.png';
+import josephWhitehouse from '../images/tm-josephWhitehouse.png';
+import juliaNewberry from '../images/tm-juliaNewberry.png';
+import jhMagee from '../images/tm-jhMagee.png';
+import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
 import debord from '../images/debord.png';
 import deleuze from '../images/deleuze.png';
@@ -28,7 +30,9 @@ const images = {
     'juliaNewberry': juliaNewberry,
     'wolfej': wolfej,
     'deleuze': deleuze,
-    'debord': debord
+    'debord': debord,
+    'jhMagee': jhMagee,
+    'eraBellThompson': eraBellThompson
 };
 const Masonrycontainer = styled.div`
     width: 80%;

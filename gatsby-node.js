@@ -12,7 +12,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { order: DESC, fields: [frontmatter___image] }
         limit: 1000
       ) {
         edges {
@@ -28,6 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
+    reporter.panicOnBuild(result.errors)
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
