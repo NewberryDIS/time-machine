@@ -47,37 +47,39 @@ const images = {
     'eraBellThompson': eraBellThompsonpic
 }
 const Maparea = styled.div` 
+    position: sticky;
+    height:100vh;
     flex: 1;
     display: flex;
+    flex-direction: column;
     -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
 `
 const Leftpanel = ( props ) => (
     <div css={css`
-        flex-basis: 15%;
+        // position: fixed;
+        overflow-y: auto;
+        flex-basis: 20%;
         background: #333;
         color: #e8e9ca;
-        min-height: 100vh;
         align-content: space-between;
         display: flex;
         flex-direction: column;
         background-size: 100%;
         background-attachment: fixed;
-
     `}>
-        <div css={css`width: 80%; margin: 15% auto; flex: grow;`} >
+        <div css={css`width: 80%; margin: 15% auto; flex-grow: 1;`} >
             <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem ${props.colors.dark});`} src={images[props.image]} alt="" />
             <p css={css`padding-top: 35px; font-size: 1.5rem; line-height: 2.25rem;font-family: 'Hepta Slab',serif;`} >{props.title}</p>
-            <p css={css`padding-top: 35px; font-family: 'Lato',sans-serif;`} >{props.shorttext}</p>
         </div>
         <Link css={css`
                 margin: 0 20px;
-                    font-family: 'Hepta Slab',serif;
-                    font-weight: 100;
-                    font-size: 1rem;
-                    color: ${props.colors.light};
-                    text-decoration: none;
+                font-family: 'Hepta Slab',serif;
+                font-weight: 100;
+                font-size: 1rem;
+                color: ${props.colors.light};
+                text-decoration: none;
                 padding: 15px 30px ;
                 border: 0;
                 &:hover {
@@ -85,13 +87,13 @@ const Leftpanel = ( props ) => (
                     -webkit-box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
                     -moz-box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
                     box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
-                        color: ${props.colors.dark};
-
+                    color: ${props.colors.dark};
                 }
                 background: rgba(${props.colors.darkrgba},0.15);
                 border-radius: 6px; 
                 flex-basis: 1rem;
                 text-align: center;
+                flex-shrink: 0;
         `} to="/choose">Swap Traveler</Link>
     </div>
 )
@@ -118,13 +120,15 @@ export default function Template({
             display: flex;
             align-items: stretch;
         `} >
+
             <Navbar handleClick={toggle} />
             <Global styles={css`
-            @import url('https://fonts.googleapis.com/css?family=Bitter|Lato:100i,300i,400|Libre+Baskerville|BioRhyme:700|Hepta+Slab:400,700|Ultra:400,700&display=swap');
+                @import url('https://fonts.googleapis.com/css?family=Bitter|Lato:100i,300i,400|Libre+Baskerville|BioRhyme:700|Hepta+Slab:400,700|Ultra:400,700&display=swap');
                 * {
                     transition: all .15s ease-in-out;
                 }
                 body {
+                    margin: 0 !important;
                     background: url('${colorState ? wpg : wpc}');
                     // background-position: center;
                     background-size: cover;
@@ -135,16 +139,16 @@ export default function Template({
             <Maparea>
                 <iframe src={frontmatter.storymapurl}
                     css={css`
-                        height: 70%;
-                        width: 80%;
-                        display: flex;
-                        margin: auto;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
                         background-color: #333;
                         -webkit-box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
                         -moz-box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
                         box-shadow: inset 10px 10px 50px 0px rgba(0,0,0,0.75);
                         color:  #e8e9ca;
                     `} />
+                    
             </Maparea>
         </div>
     )

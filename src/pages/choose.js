@@ -20,6 +20,9 @@ import deleuze from '../images/deleuze.png';
 import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 import counter from '../images/mtm-index-2-t.png';
+import Footer from '../components/footer';
+
+import '../components/layout.css'
 
 let breakPoints = [350, 500, 750];
 const images = {
@@ -110,14 +113,14 @@ class Masonry extends React.Component {
 
 const Tile = ({ content, colors }) => 
     <div className="tile" css={css`
-            background: rgba(255,255,255,0.5);
+        background: rgba(255,255,255,0.5);
         background: rgba(${colors.lightrgba}},0.85);
-            background-attachment: fixed;
-            background-position: center;
+        background-attachment: fixed;
+        background-position: center;
         color: ${colors.dark};
         margin: 4px;
         border: 2px solid #27452B;
-        flex-basis: 150px;
+        flex-basis: 175px;
         border-radius: 6px;
         padding: 10px 10px 25px 10px;
         position: relative;
@@ -150,22 +153,30 @@ const Tile = ({ content, colors }) =>
             filter: drop-shadow(0 0 0.75rem ${colors.dark});
         `} 
         src={images[content['image']]} alt="person"/>
-    <h2 css={css`font-family: 'Hepto Slab', serif;`}>{content.name}</h2>
+    <h2 css={css`font-family: 'Hepta Slab', serif;`}>{content.name}</h2>
     <p css={css`font-family: 'Lato', sans-serif;`}>{content.desc}</p>
     <Link to={'/' + content.image} css={css`
-    text-decoration: none;
+        text-decoration: none;
+        display: block;
         padding: 10px;
         margin: 15px auto;
-        background: ${colors.dark};
-        color:  ${colors.light};
-        font-family: 'Hepto Slab', serif;   
+        background: rgba(${colors.darkrgba},1);
+        color:  rgba(${colors.lightrgba},0.75);
+        font-family: 'Hepta Slab', serif;   
+        font-size: 0.9rem;
         border-radius: 6px; 
+        text-transform: uppercase;
+        // font-weight: 900;
         -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
         box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
         transition: all .15s ease-in-out;
         &:hover {
+            background: ${colors.dark};
             color: white;
+            -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+            -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
         }
     `}>Begin your journey</Link>
 </div>
@@ -196,9 +207,11 @@ export default class Choose extends React.Component {
         }
         return ( <div>
                     <Global styles={css`
+                    @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
                     body {
+                        margin: 0;
                         background: url('${this.state.colorState ? wpg : wpc}');
-                        background-position: center;
+                        // background-position: center;
                         background-size: cover;
                     }
                 `}/>
@@ -220,6 +233,7 @@ export default class Choose extends React.Component {
                             {Travelers.map((content, i) => <Tile className="twistessa" key={i} content={content} colors={colors} colorState={this.state.colorState} />)}
                         </Masonry>
                 </Masonrycontainer>
+                <Footer />
             </div>
         )
     }
