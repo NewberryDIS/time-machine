@@ -4,9 +4,12 @@ import { css, jsx, Global } from '@emotion/core';
 import styled from "@emotion/styled";
 import { Travelers } from '../components/data';
 import { Link } from "gatsby"
-// images
 
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import '../components/layout.css'
+
+// images
 import amyWingreen from '../images/tm-amyWingreen.png';
 import blackHawk from '../images/tm-blackHawk.png';
 import errettGraham from '../images/tm-errettGraham.png';
@@ -15,16 +18,13 @@ import juliaNewberry from '../images/tm-juliaNewberry.png';
 import jhMagee from '../images/tm-jhMagee.png';
 import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
-import debord from '../images/debord.png';
-import deleuze from '../images/deleuze.png';
+import cgPearce from '../images/tm-cgPearce.png';
+import noone from '../images/noone.png';
 import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
-import counter from '../images/mtm-index-2-t.png';
-import Footer from '../components/footer';
 
-import '../components/layout.css'
 
-let breakPoints = [350, 500, 750];
+let breakPoints = [350, 500, 750, 1050];
 const images = {
     'amyWingreen': amyWingreen,
     'blackHawk': blackHawk,
@@ -32,13 +32,13 @@ const images = {
     'josephWhitehouse': josephWhitehouse,
     'juliaNewberry': juliaNewberry,
     'wolfej': wolfej,
-    'deleuze': deleuze,
-    'debord': debord,
+    'cgPearce': cgPearce,
     'jhMagee': jhMagee,
+    'noone': noone,
     'eraBellThompson': eraBellThompson
 };
 const Masonrycontainer = styled.div`
-    width: 80%;
+    width: 85%;
     margin: auto;
     margin-top: 10px;
     text-align: center;
@@ -58,7 +58,7 @@ const Column = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-content: stretch;
-    flex-basis: 220px;
+    flex-basis: 235px;
 `
 class Masonry extends React.Component {
     constructor(props) {
@@ -120,7 +120,7 @@ const Tile = ({ content, colors }) =>
         color: ${colors.dark};
         margin: 4px;
         border: 2px solid #27452B;
-        flex-basis: 175px;
+        flex-basis: 200px;
         border-radius: 6px;
         padding: 10px 10px 25px 10px;
         position: relative;

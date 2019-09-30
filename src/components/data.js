@@ -1,7 +1,7 @@
 export const amyWingreen = {
 	image: 'amyWingreen',
 	name: 'The Military Nurse: Amy Wingreen',
-	desc: 'The alarm still oscillated, louder here, the rear of the Villa bespeak a turning in, a denial of the bright void beyond the hull. Strata of cigarette smoke rose from the tiers, drifting until it struck currents set up by the blowers and the amplified breathing of the room where Case waited.',
+	desc: 'Brave scorpions, yellow fever and privations nursing wounded soldiers in the Spanish American War.',
 	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/wingreen/index.html'
 }
 export const blackHawk = {
@@ -11,7 +11,7 @@ export const blackHawk = {
 	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/black-hawk/index.html'
 }
 export const cgPearce = {
-	image: 'deleuze',
+	image: 'cgPearce',
 	name: 'The Steamboat Captain: Christopher Gardner Pearce',
 	desc: 'No light but the muted purring of the arcade showed him broken lengths of damp chipboard and the chassis of a gutted game console. No sound but the muted purring of the bright void beyond the chain link.',
 	storymapurl: 'https://www.google.com'
@@ -51,4 +51,9 @@ export const wolfej = {
 	name: 'The DIS Queen: Jen Slow Wolfe',
 	desc: 'A graphic representation of data abstracted from the Chinese program’s semiotics, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct reflection.'
 }
-export const Travelers = [ blackHawk,  juliaNewberry,  jhMagee,  errettGraham,  eraBellThompson,  amyWingreen,  josephWhitehouse,  cgPearce ]
+export const transcription = {
+	image: 'noone',
+	name: 'Discover a new journey!',
+	desc: 'Help scholars and learn about history by transcribing documents from the Newberry’s collections'
+}
+export const Travelers = [ blackHawk,  juliaNewberry,  jhMagee,  errettGraham,  eraBellThompson,  amyWingreen,  josephWhitehouse,  cgPearce, transcription ]
