@@ -64,15 +64,14 @@ const Leftpanel = ( props ) => (
         background: #333;
         color: #e8e9ca;
         align-content: space-between;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         background-size: 100%;
         background-attachment: fixed;
     `}>
         <div css={css`width: 80%; margin: 15% auto; flex-grow: 1;`} >
             <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem ${props.colors.dark});`} src={images[props.image]} alt="" />
             <p css={css`padding-top: 35px; font-size: 1.5rem; line-height: 2.25rem;font-family: 'Hepta Slab',serif;`} >{props.title}</p>
-        </div>
         <Link css={css`
                 margin: 0 20px;
                 font-family: 'Hepta Slab',serif;
@@ -81,6 +80,7 @@ const Leftpanel = ( props ) => (
                 color: ${props.colors.light};
                 text-decoration: none;
                 padding: 15px 30px ;
+                width: 100%;
                 border: 0;
                 &:hover {
                     background-color: ${props.colors.light};
@@ -95,6 +95,8 @@ const Leftpanel = ( props ) => (
                 text-align: center;
                 flex-shrink: 0;
         `} to="/choose">Swap Traveler</Link>
+        </div>
+
     </div>
 )
 export default function Template({
