@@ -22,6 +22,7 @@ import cgPearce from '../images/tm-cgPearce.png';
 import noone from '../images/noone.png';
 import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
+import paper from '../images/paper.png';
 
 
 let breakPoints = [350, 500, 750, 1050];
@@ -59,6 +60,7 @@ const Column = styled.div`
     justify-content: flex-start;
     align-content: stretch;
     flex-basis: 235px;
+    // width: 235px;
 `
 class Masonry extends React.Component {
     constructor(props) {
@@ -110,11 +112,37 @@ class Masonry extends React.Component {
     }
 }
 
+const buttoncss = colors => css`
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        margin: 15px auto;
+        background: rgba(0,0,0,1);;
+        background-image: url(${paper});
+        color:  rgba(255,255,255,0.75);
+        font-family: 'Hepta Slab', serif;   
+        font-size: 0.9rem;
+        border-radius: 6px; 
+        text-transform: uppercase;
+        // font-weight: 900;
+        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+        transition: all .15s ease-in-out;
+        &:hover {
+            background: black;
+            color: white;
+            -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+            -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+        }
+
+`
 
 const Tile = ({ content, colors }) => 
     <div className="tile" css={css`
         background: rgba(255,255,255,0.5);
-        background: rgba(${colors.lightrgba}},0.85);
+        // background: rgba(${colors.lightrgba},0.85);
         background-attachment: fixed;
         background-position: center;
         color: ${colors.dark};
@@ -144,10 +172,29 @@ const Tile = ({ content, colors }) =>
             background: ${colors.light};
             background-attachment: fixed;
             background-position: center;
+            & .tilecap {
+                color: rgba(${colors.lightrgba},1);
+            }
+        }
+        & h2 {
+            font-size: calc(12px + 1.1vw);
+        }
+        & .tilecap {
+            font-family: 'Lato', sans-serif;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            font-weight: 700;
+            border-radius: 6px 6px 0 0;
+            color: rgba(${colors.lightrgba},0.75);
+            background: ${content.button ? '#284883' : '#641818' };
+            background-image: url(${paper});
         }
     `}>
+        <div className="tilecap">Destination:<br />{content.dest}</div>
     <img css={css`
-            padding: 25px 25px 5px 25px;
+            padding: 55px 25px 5px 25px;
             width: 150px;
 
             filter: drop-shadow(0 0 0.75rem ${colors.dark});
@@ -155,30 +202,7 @@ const Tile = ({ content, colors }) =>
         src={images[content['image']]} alt="person"/>
     <h2 css={css`font-family: 'Hepta Slab', serif;`}>{content.name}</h2>
     <p css={css`font-family: 'Lato', sans-serif;`}>{content.desc}</p>
-    <Link to={'/' + content.image} css={css`
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-        margin: 15px auto;
-        background: rgba(${colors.darkrgba},1);
-        color:  rgba(${colors.lightrgba},0.75);
-        font-family: 'Hepta Slab', serif;   
-        font-size: 0.9rem;
-        border-radius: 6px; 
-        text-transform: uppercase;
-        // font-weight: 900;
-        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        transition: all .15s ease-in-out;
-        &:hover {
-            background: ${colors.dark};
-            color: white;
-            -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
-            -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
-            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
-        }
-    `}>Begin your journey</Link>
+    {content.button ? <a css={buttoncss} href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank">{content.button}</a> : <Link css={buttoncss} to={'/' + content.image}>{content.button ? content.button : 'Begin your journey'}</Link>}
 </div>
 export default class Choose extends React.Component {
     constructor() {
@@ -189,9 +213,7 @@ export default class Choose extends React.Component {
         }
     }
     handleClick() {
-        this.setState(prevState => ({
-            colorState: !prevState.colorState
-        }));
+        this.setState(prevState => ({colorState: !prevState.colorState}));
     }
     render() {
         const colors = this.state.colorState ? {

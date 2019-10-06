@@ -71,13 +71,14 @@ const Leftpanel = ( props ) => (
     `}>
         <div css={css`width: 80%; margin: 15% auto; flex-grow: 1;`} >
             <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem ${props.colors.dark});`} src={images[props.image]} alt="" />
-            <p css={css`padding-top: 35px; font-size: 1.5rem; line-height: 2.25rem;font-family: 'Hepta Slab',serif;`} >{props.title}</p>
+            <p css={css`padding-top: 35px; font-size: calc(12px + 1vw); line-height: 2.25rem;font-family: 'Hepta Slab',serif;`} >{props.title}</p>
         <Link css={css`
-                margin: 0 20px;
+                margin: 20px auto;
                 font-family: 'Hepta Slab',serif;
                 font-weight: 100;
-                font-size: 1rem;
+                font-size: calc(10px + 0.5vw);
                 color: ${props.colors.light};
+                display: block;
                 text-decoration: none;
                 padding: 15px 30px ;
                 width: 100%;

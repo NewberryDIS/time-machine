@@ -16,7 +16,7 @@ import '../components/layout.css'
 const Text  = styled.div`
     font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
-    text-align: justify;
+    // text-align: justify;
     padding: 15px 30px ;
 `
 const Title  = styled.p`
@@ -248,7 +248,7 @@ function Main() {
                     <div className="strike">
                         <span>Or</span>
                     </div>
-                    <Link className="newberry-transcribe" to="/intgs">Unlock more stories from the past at our transcription crowdsourcing project: NEWBERRY TRANSCRIBE</Link>
+                    <a className="newberry-transcribe" href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank">Unlock more stories from the past at our transcription crowdsourcing project: NEWBERRY TRANSCRIBE</a>
             </Splashleft>
             <Splashright>
                 <Circleimage className="circleimage" src={ blackHawk } alt=""/>

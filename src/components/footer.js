@@ -51,27 +51,27 @@ const Footer = (props) => {
     return (
         <FooterWrapper width={props.width}>
             <FooterSection className="left">
-                <a href="https://www.newberry.org/contact-librarian">
+                <a target="_blank" href="https://www.newberry.org/contact-librarian">
                     Contact Us
                 </a>
             </FooterSection>
             <FooterSection className="middle">
                 Except where otherwise noted, contextual content on this site is made available under a &nbsp;
-                <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">
+                <a target="_blank" href="https://creativecommons.org/share-your-work/public-domain/cc0/">
                     Creative Commons Public Domain license. &nbsp;
                 </a>
                 Digitized images and other media from the Newberry's collections are made available for any lawful purpose, commercial or non-commercial, without licensing or permission fees to the library, subject to the following terms and conditions:&nbsp;
-                <a href="https://www.newberry.org/rights-and-reproductions">
+                <a target="_blank" href="https://www.newberry.org/rights-and-reproductions">
                     Newberry Rights and Reproductions Policy. 
                 </a>
             </FooterSection>
             <FooterSection className="right">
                 Grateful acknowledgement to &nbsp;
-                <a href="https://www.wbez.org/shows/curious-city/7b79e16d-f3a9-4156-9b27-4d2cc6ce351e?_ga=2.28540796.1753639261.1569526664-1089342726.1568933062">
+                <a target="_blank" href="https://www.wbez.org/shows/curious-city/7b79e16d-f3a9-4156-9b27-4d2cc6ce351e?_ga=2.28540796.1753639261.1569526664-1089342726.1568933062">
                     WBEZ’s Curious City&nbsp;
                 </a>
                 and the inspiration from their site &nbsp;
-                <a href="http://interactive.wbez.org/curiouscity/1910train/">
+                <a target="_blank" href="http://interactive.wbez.org/curiouscity/1910train/">
                     If you toured Chicago in 1910, what would you do?
                 </a>
 
