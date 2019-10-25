@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/intgs.js"],"names":["Intgs"],"mappings":"0FAAA,2BAQeA,UANf,WACI,OAEI","file":"component---src-pages-intgs-js-b3bacf8ba71b0d6181ab.js","sourcesContent":["import React from 'react'\n\nfunction Intgs() {\n    return (\n\n        <div>this should be a real link.  </div>\n    )\n}\nexport default Intgs;"],"sourceRoot":""}
