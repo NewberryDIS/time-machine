@@ -16,6 +16,7 @@ import juliaNewberrypic from '../images/tm-juliaNewberry.png';
 import wolfejpic from '../images/wolfej.png';
 import jhMageepic from '../images/tm-jhMagee.png';
 import eraBellThompsonpic from '../images/tm-eraBellThompson.png';
+import thxpic from '../images/tm-thx.png';
 import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 
@@ -44,7 +45,8 @@ const images = {
     'deleuze': deleuzepic,
     'debord': debordpic,
     'jhMagee': jhMageepic,
-    'eraBellThompson': eraBellThompsonpic
+    'eraBellThompson': eraBellThompsonpic,
+    'thx': thxpic,
 }
 const Maparea = styled.div` 
     position: sticky;

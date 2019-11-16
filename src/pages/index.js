@@ -86,21 +86,21 @@ const Halfground  = styled.div`
     // @media (max-width: 750px) {width: 100%;} 
 `
 function Main() {
-    const [colorState, setColorState] = useState(false);
-    const toggle = () => setColorState(!colorState)
-    let colors = colorState ? {
-        dark: '#27452B',
-        darkrgba: '39,69,43', 
-        light: '#D6D7B5',
-        lightrgba: '214,215,181'
-    } : {
-        dark: '#000',
-        darkrgba: '0,0,0', 
-        light: '#fff',
-        lightrgba: '255,255,255'
-    }
+    // const [colorState, setColorState] = useState(false);
+    // const toggle = () => setColorState(!colorState)
+    // let colors = colorState ? {
+    //     dark: '#27452B',
+    //     darkrgba: '39,69,43', 
+    //     light: '#D6D7B5',
+    //     lightrgba: '214,215,181'
+    // } : {
+    //     dark: '#000',
+    //     darkrgba: '0,0,0', 
+    //     light: '#fff',
+    //     lightrgba: '255,255,255'
+    // }
     return <div className="wrapper">
-        <Navbar handleClick={toggle} />
+        <Navbar />
         <Global styles={css`
                     @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
                     * {
@@ -111,41 +111,40 @@ function Main() {
                     }
                     body {
                         margin: 0;
-                        background: url('${colorState ? wpg : wpc}');
-                        // background-position: center;
+                        background: url('${wpc}');
                         background-size: cover;
                         background-attachment: fixed;
                     }
                     .title {
-                        filter: drop-shadow(0 0 0.25rem ${colors.dark});
-                        color: ${colors.light};
+                        filter: drop-shadow(0 0 0.25rem #000);
+                        color: #fff;
                         text-shadow:
-                        -1px -1px 0 ${colors.dark},  
-                        1px -1px 0 ${colors.dark},
-                        -1px 1px 0 ${colors.dark},
-                        1px 1px 0 ${colors.dark};
+                        -1px -1px 0 #000,  
+                        1px -1px 0 #000,
+                        -1px 1px 0 #000,
+                        1px 1px 0 #000;
                     }
                     .text {
-                        color: ${colors.dark};
+                        color: #000;
                     }
                     .circleimage {
-                        filter: drop-shadow(0 0 0.75rem ${colors.dark});
+                        filter: drop-shadow(0 0 0.75rem #000);
                         &:hover {
-                            filter: drop-shadow(0 0 1rem ${colors.dark});
+                            filter: drop-shadow(0 0 1rem #000);
                         }
                     }
                     .halfground {
-                        border: 2px solid rgba(${colors.darkrgba},1); 
-                        background: rgba(${colors.lightrgba},0.85);
-                        -webkit-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                        -moz-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                        box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                        border: 2px solid rgba(0,0,0,1); 
+                        background: rgba(255,255,255,0.85);
+                        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
                         &:hover {
-                            background: rgba(${colors.lightrgba},1);
+                            background: rgba(255,255,255,1);
                             background-image: url('${fg}'); 
-                            -webkit-box-shadow: 10px 10px 35px 0px rgba(${colors.darkrgba},0.75);
-                            -moz-box-shadow: 10px 10px 305x 0px rgba(${colors.darkrgba},0.75);
-                            box-shadow: 10px 10px 35px 0px rgba(${colors.darkrgba},0.75);
+                            -webkit-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 10px 10px 305x 0px rgba(0,0,0,0.75);
+                            box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
                         }
                     }
                     .newberry-transcribe {
@@ -155,15 +154,15 @@ function Main() {
                             color: black;
                             text-decoration: none;
                         padding: 15px 30px ;
-                        border: 1px solid rgba(${colors.darkrgba}, 0.5);
+                        border: 1px solid rgba(0,0,0, 0.5);
                         &:hover {
-                            border: 1px solid ${colors.dark};
-                            background-color: ${colors.light};
-                            -webkit-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                            -moz-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                            box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                            border: 1px solid #000;
+                            background-color: #fff;
+                            -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
                         }
-                        background: rgba(${colors.lightrgba},0);
+                        background: rgba(255,255,255,0);
                         border-radius: 6px; 
                         flex-basis: 1rem;
                         text-align: center;
@@ -225,22 +224,22 @@ function Main() {
                             padding: 13px 20px;
                             font-family: 'Hepta Slab',serif;
                             font-weight: 900;
-                            background: ${colors.dark};
-                            color:  rgba(${colors.lightrgba},0.75) ;
+                            background: #000;
+                            color:  rgba(255,255,255,0.75) ;
                             border-radius: 6px; 
-                            -webkit-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                            -moz-box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
-                            box-shadow: 10px 10px 30px 0px rgba(${colors.darkrgba},0.75);
+                            -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
                             text-transform: uppercase;
                             &:hover {
                                 text-shadow: none;
-                                color: ${colors.dark};
+                                color: #000;
                             }
                             text-shadow:
-                            -1px -1px 0 ${colors.dark},  
-                            1px -1px 0 ${colors.dark},
-                            -1px 1px 0 ${colors.dark},
-                            1px 1px 0 ${colors.dark};
+                            -1px -1px 0 #000,  
+                            1px -1px 0 #000,
+                            -1px 1px 0 #000,
+                            1px 1px 0 #000;
                             `}
                             className="newberry-transcribe"
                             >Choose Your Time Traveler</Link>

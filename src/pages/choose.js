@@ -19,6 +19,7 @@ import jhMagee from '../images/tm-jhMagee.png';
 import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
 import cgPearce from '../images/tm-cgPearce.png';
+import thx from '../images/tm-thx.png';
 import noone from '../images/noone.png';
 import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
@@ -36,7 +37,8 @@ const images = {
     'cgPearce': cgPearce,
     'jhMagee': jhMagee,
     'noone': noone,
-    'eraBellThompson': eraBellThompson
+    'eraBellThompson': eraBellThompson,
+    'thx': thx
 };
 const Masonrycontainer = styled.div`
     width: 85%;
@@ -112,40 +114,45 @@ class Masonry extends React.Component {
     }
 }
 
-const buttoncss = colors => css`
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-        margin: 15px auto;
-        background: rgba(0,0,0,1);;
-        background-image: url(${paper});
-        color:  rgba(255,255,255,0.75);
-        font-family: 'Hepta Slab', serif;   
-        font-size: 0.9rem;
-        border-radius: 6px; 
-        text-transform: uppercase;
-        // font-weight: 900;
-        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        transition: all .15s ease-in-out;
-        &:hover {
-            background: black;
-            color: white;
-            -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
-            -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
-            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
-        }
+const buttoncss = () => css`
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 15px auto;
+    background: rgba(0,0,0,1);;
+    background-image: url(${paper});
+    color:  rgba(255,255,255,0.75);
+    font-family: 'Hepta Slab', serif;   
+    font-size: 0.9rem;
+    border-radius: 6px; 
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    // font-weight: 900;
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    transition: all .15s ease-in-out;
+    &:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+    }
 
 `
 
-const Tile = ({ content, colors }) => 
-    <div className="tile" css={css`
+const Tile = ({ content }) => 
+    <Link to={'/' + content.image} className="tile" css={css`
+        text-decoration: none;
+        display: block;
         background: rgba(255,255,255,0.5);
-        // background: rgba(${colors.lightrgba},0.85);
+        // background: rgba(255,255,255,0.85);
         background-attachment: fixed;
         background-position: center;
-        color: ${colors.dark};
+        color: #000;
         margin: 4px;
         border: 2px solid #27452B;
         flex-basis: 200px;
@@ -169,17 +176,17 @@ const Tile = ({ content, colors }) =>
             box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
         }
         &:hover {
-            background: ${colors.light};
+            background: #fff;
             background-attachment: fixed;
             background-position: center;
             & .tilecap {
-                color: rgba(${colors.lightrgba},1);
+                color: rgba(255,255,255,1);
             }
         }
         & h2 {
             font-size: calc(12px + 1.1vw);
         }
-        & .tilecap {
+        & .tilecap, .tilecapthx {
             font-family: 'Lato', sans-serif;
             position: absolute;
             top: -2px;
@@ -187,59 +194,46 @@ const Tile = ({ content, colors }) =>
             right: -2px;
             font-weight: 700;
             border-radius: 6px 6px 0 0;
-            color: rgba(${colors.lightrgba},0.75);
-            background: ${content.button ? '#284883' : '#641818' };
+            color: rgba(255,255,255,0.75);
             background-image: url(${paper});
         }
+        & .tilecap {
+            background: ${content.button ? '#284883' : '#641818' };
+        }
+        & .tilecapthx {
+            background: orange;
+            line-height: 40px;
+        }
     `}>
-        <div className="tilecap">Destination:<br />{content.dest}</div>
+        {content.image === 'thx' ? 
+            <div className="tilecapthx">{content.dest}</div>
+            : <div className="tilecap">Destination:<br />{content.dest}</div>}
     <img css={css`
             padding: 55px 25px 5px 25px;
             width: 150px;
-
-            filter: drop-shadow(0 0 0.75rem ${colors.dark});
+            filter: drop-shadow(0 0 0.75rem #000);
         `} 
         src={images[content['image']]} alt="person"/>
     <h2 css={css`font-family: 'Hepta Slab', serif;`}>{content.name}</h2>
     <p css={css`font-family: 'Lato', sans-serif;`}>{content.desc}</p>
-    {content.button ? <a css={buttoncss} href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank">{content.button}</a> : <Link css={buttoncss} to={'/' + content.image}>{content.button ? content.button : 'Begin your journey'}</Link>}
-</div>
+    {content.button ? <button css={buttoncss} href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank">{content.button}</button> : <button css={buttoncss} to={'/' + content.image}>{content.button ? content.button : 'Begin your journey'}</button>}
+</Link>
+
 export default class Choose extends React.Component {
-    constructor() {
-        super()
-        this.handleClick = this.handleClick.bind(this)
-        this.state = {
-            colorState: false
-        }
-    }
-    handleClick() {
-        this.setState(prevState => ({colorState: !prevState.colorState}));
-    }
     render() {
-        const colors = this.state.colorState ? {
-            dark: '#27452B',
-            darkrgba: '39,69,43', 
-            light: '#D6D7B5',
-            lightrgba: '214,215,181'
-        } : {
-            dark: '#000',
-            darkrgba: '0,0,0', 
-            light: '#fff',
-            lightrgba: '255,255,255'
-        }
         return ( <div>
                     <Global styles={css`
                     @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
                     body {
                         margin: 0;
-                        background: url('${this.state.colorState ? wpg : wpc}');
+                        background: url('${wpc}');
                         // background-position: center;
                         background-size: cover;
                     }
                 `}/>
-            <Navbar handleClick={this.handleClick} />
+            <Navbar />
             <div className="container" css={css`
-                background-image: url('${this.state.colorState ? wpg : wpc}');
+                background-image: url('${wpc}');
                 background-size: cover;
                 position: fixed;
                 overflow: hidden;
@@ -252,7 +246,7 @@ export default class Choose extends React.Component {
             `}></div>
                 <Masonrycontainer>
                         <Masonry breakPoints={breakPoints}>
-                            {Travelers.map((content, i) => <Tile className="twistessa" key={i} content={content} colors={colors} colorState={this.state.colorState} />)}
+                            {Travelers.map((content, i) => <Tile className="twistessa" key={i} content={content}  />)}
                         </Masonry>
                 </Masonrycontainer>
                 <Footer />

@@ -54,6 +54,13 @@ export const juliaNewberry = {
 	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/julia-newberry/index.html',
 	dest: '1869-1871'
 }
+export const thx = {
+	image: 'thx',
+	name: 'Thanksgiving in Letters, 1849-1904',
+	desc: 'Dine with a homesick college girl, a Civil War Soldier, the new father of a “Thanksgiving baby,” and others.',
+	storymapurl: ' https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/thanksgiving/index.html',
+	dest: 'Holiday bonus!'
+}
 export const wolfej = {
 	image: 'wolfej',
 	name: 'The DIS Queen: Jen Slow Wolfe',
@@ -66,4 +73,4 @@ export const transcription = {
 	dest: '???',
 	button: 'Transcribe now!'
 }
-export const Travelers = [ blackHawk,  juliaNewberry,  jhMagee,  errettGraham,  eraBellThompson,  amyWingreen,  josephWhitehouse,  cgPearce, transcription ]
+export const Travelers = [ thx, blackHawk, juliaNewberry,  jhMagee,  errettGraham,  eraBellThompson,  amyWingreen,  josephWhitehouse,  cgPearce, transcription ]
