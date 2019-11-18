@@ -1,10 +1,9 @@
-import { useState} from 'react';
 /** @jsx jsx */
 import { css, jsx, Global } from '@emotion/core';
 import styled from "@emotion/styled";
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import Navbar from '../components/navbar';
-import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 import fg from '../images/mtm-index-2-t.png';
 import eraBellThompson from '../images/tm-eraBellThompson.png';
@@ -100,6 +99,10 @@ function Main() {
     //     lightrgba: '255,255,255'
     // }
     return <div className="wrapper">
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Newberry's Midwest Time Machine</title>
+        </Helmet>
         <Navbar />
         <Global styles={css`
                     @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
@@ -148,11 +151,11 @@ function Main() {
                         }
                     }
                     .newberry-transcribe {
-                            font-family: 'Lato', sans-serif;
-                            font-weight: 100;
-                            font-size: 1rem;
-                            color: black;
-                            text-decoration: none;
+                        font-family: 'Lato', sans-serif;
+                        // font-weight: 100;
+                        font-size: 1rem;
+                        color: black;
+                        text-decoration: none;
                         padding: 15px 30px ;
                         border: 1px solid rgba(0,0,0, 0.5);
                         &:hover {
@@ -162,7 +165,7 @@ function Main() {
                             -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
                             box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
                         }
-                        background: rgba(255,255,255,0);
+                        background: rgba(255,255,255,0.8);
                         border-radius: 6px; 
                         flex-basis: 1rem;
                         text-align: center;
@@ -247,7 +250,7 @@ function Main() {
                     <div className="strike">
                         <span>Or</span>
                     </div>
-                    <a className="newberry-transcribe" href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank">Unlock more stories from the past at our transcription crowdsourcing project: NEWBERRY TRANSCRIBE</a>
+                    <a className="newberry-transcribe" href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank" rel="noopener noreferrer">Unlock more stories from the past at our transcription crowdsourcing project: NEWBERRY TRANSCRIBE</a>
             </Splashleft>
             <Splashright>
                 <Circleimage className="circleimage" src={ blackHawk } alt=""/>

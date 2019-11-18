@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import logob from '../images/Newberry_N.svg';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
 
 const Navchunk = styled.div`
     z-index: 2;
-    position: fixed;
-    top: 5px;
-    left: 7px;
+    // position: fixed;
+    // top: 5px;
+    // left: 7px;
+    margin: 7px 0 0 5px;
     height: 60px;
     padding: 0 5px;
     display: inline-flex;
-    border: 2px solid transparent;
     border-radius: 8px;
     font-family: 'Lato', sans-serif;
     flex-direction: row;
@@ -25,7 +26,6 @@ const Navchunk = styled.div`
             filter: drop-shadow(0 0 0.25rem white);
         }
     }
-    &:hover {
         -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
         box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
@@ -37,7 +37,6 @@ const Navchunk = styled.div`
         & .nav-n-logo img {
             filter: invert(100%);
         }
-    }
     & .nav-n-logo {
         padding: 4px 0 4px 7px;
         width: 50px;
@@ -49,7 +48,6 @@ const Navchunk = styled.div`
         align-content: stretch;
         height: 40px;
         line-height: 40px;
-        color: transparent;
     }
     & img {
         transition: all .15s ease-in-out;
@@ -64,17 +62,14 @@ const Navchunk = styled.div`
 export default class Navbar extends React.Component {
     render(){
         return(
-                        <Navchunk onClick={this.props.handleClick} className="navleft" >
-                                <a href="http://www.newberry.org" className="nav-n-logo">
-                                    <img alt="Newberry Logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-                                </a>
-                                <a href="http://www.newberry.org/digital-newberry/" className="nav-textlink">
-                                    &gt; Digital Newberry
-                                </a>
-                                <a href="/"className="nav-textlink">
-                                    &gt; Time Machine
-                                </a>
-                        </Navchunk>
+            <Navchunk onClick={this.props.handleClick} className="navleft" >
+                    <OutboundLink href="http://www.newberry.org" className="nav-n-logo">
+                        <img alt="Newberry Logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                    </OutboundLink>
+                    <OutboundLink href="https://publications.newberry.org/time-machine/"className="nav-textlink">
+                        &gt; Time Machine
+                    </OutboundLink>
+            </Navchunk>
         )
     }
 }

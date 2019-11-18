@@ -20,10 +20,11 @@ import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
 import cgPearce from '../images/tm-cgPearce.png';
 import thx from '../images/tm-thx.png';
+import raster from '../images/tm-raster.png';
 import noone from '../images/noone.png';
-import wpg from '../images/wp.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 import paper from '../images/paper.png';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 
 let breakPoints = [350, 500, 750, 1050];
@@ -37,6 +38,7 @@ const images = {
     'cgPearce': cgPearce,
     'jhMagee': jhMagee,
     'noone': noone,
+    'raster': raster,
     'eraBellThompson': eraBellThompson,
     'thx': thx
 };
@@ -114,6 +116,7 @@ class Masonry extends React.Component {
     }
 }
 
+const tileCss = () => css`text-decoration: none;`
 const buttoncss = () => css`
     cursor: pointer;
     text-decoration: none;
@@ -136,6 +139,7 @@ const buttoncss = () => css`
     &:hover {
         background: white;
         color: black;
+        font-weight: 700;
         border: 1px solid black;
         -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
         -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
@@ -145,7 +149,8 @@ const buttoncss = () => css`
 `
 
 const Tile = ({ content }) => 
-    <Link to={'/' + content.image} className="tile" css={css`
+    <div className="tile" css={css`
+    * {text-decoration: none;}
         text-decoration: none;
         display: block;
         background: rgba(255,255,255,0.5);
@@ -185,6 +190,9 @@ const Tile = ({ content }) =>
         }
         & h2 {
             font-size: calc(12px + 1.1vw);
+            padding: 0;
+            margin: 0;
+            overflow-wrap: normal;
         }
         & .tilecap, .tilecapthx {
             font-family: 'Lato', sans-serif;
@@ -199,25 +207,31 @@ const Tile = ({ content }) =>
         }
         & .tilecap {
             background: ${content.button ? '#284883' : '#641818' };
+
+            border: 2px solid #27452B;
+            border-bottom: 2px solid transparent;
         }
         & .tilecapthx {
+            color: white;
             background: orange;
-            line-height: 40px;
+            line-height: 52px;
+            border: 2px solid #27452B;
+            border-bottom: 2px solid transparent;
         }
     `}>
         {content.image === 'thx' ? 
             <div className="tilecapthx">{content.dest}</div>
             : <div className="tilecap">Destination:<br />{content.dest}</div>}
-    <img css={css`
-            padding: 55px 25px 5px 25px;
-            width: 150px;
-            filter: drop-shadow(0 0 0.75rem #000);
-        `} 
-        src={images[content['image']]} alt="person"/>
-    <h2 css={css`font-family: 'Hepta Slab', serif;`}>{content.name}</h2>
-    <p css={css`font-family: 'Lato', sans-serif;`}>{content.desc}</p>
-    {content.button ? <button css={buttoncss} href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank">{content.button}</button> : <button css={buttoncss} to={'/' + content.image}>{content.button ? content.button : 'Begin your journey'}</button>}
-</Link>
+        <img css={css`
+                padding: 55px 25px 5px 25px;
+                width: 150px;
+                filter: drop-shadow(0 0 0.75rem #000);
+            `} 
+            src={images[content['image']]} alt="person"/>
+        <h2 css={css`font-family: 'Hepta Slab', serif;`}>{content.name}</h2>
+        <p css={css`font-family: 'Lato', sans-serif;`}>{content.desc}</p>
+        <button css={buttoncss} >{content.button ? content.button : 'Begin your journey'}</button>
+    </div>
 
 export default class Choose extends React.Component {
     render() {
@@ -246,7 +260,7 @@ export default class Choose extends React.Component {
             `}></div>
                 <Masonrycontainer>
                         <Masonry breakPoints={breakPoints}>
-                            {Travelers.map((content, i) => <Tile className="twistessa" key={i} content={content}  />)}
+                            {Travelers.map((content, i) => content.button ? <OutboundLink css={tileCss} key={i} href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank">  <Tile content={content}  /></OutboundLink> : <Link key={i} css={tileCss} to={'/' + content.image}>  <Tile content={content}  /></Link>)}
                         </Masonry>
                 </Masonrycontainer>
                 <Footer />

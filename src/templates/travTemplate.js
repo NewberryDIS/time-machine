@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 /** @jsx jsx */
 import { css, jsx, Global } from '@emotion/core'
@@ -17,8 +16,6 @@ import wolfejpic from '../images/wolfej.png';
 import jhMageepic from '../images/tm-jhMagee.png';
 import eraBellThompsonpic from '../images/tm-eraBellThompson.png';
 import thxpic from '../images/tm-thx.png';
-import wpg from '../images/wp.png';
-import wpc from '../images/time-machine-splash-background.jpg';
 
 // const colors = {
 //     green: {
@@ -71,28 +68,30 @@ const Leftpanel = ( props ) => (
         background-size: 100%;
         background-attachment: fixed;
     `}>
+    <Navbar />
         <div css={css`width: 80%; margin: 15% auto; flex-grow: 1;`} >
-            <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem ${props.colors.dark});`} src={images[props.image]} alt="" />
+            <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem black);`} src={images[props.image]} alt="" />
+            {console.log(images[props.image])}
             <p css={css`padding-top: 35px; font-size: calc(12px + 1vw); line-height: 2.25rem;font-family: 'Hepta Slab',serif;`} >{props.title}</p>
         <Link css={css`
                 margin: 20px auto;
                 font-family: 'Hepta Slab',serif;
                 font-weight: 100;
                 font-size: calc(10px + 0.5vw);
-                color: ${props.colors.light};
+                color: white;
                 display: block;
                 text-decoration: none;
                 padding: 15px 30px ;
                 width: 100%;
                 border: 0;
                 &:hover {
-                    background-color: ${props.colors.light};
-                    -webkit-box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
-                    -moz-box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
-                    box-shadow: 10px 10px 30px 0px rgba(${props.colors.darkrgba},0.75);
-                    color: ${props.colors.dark};
+                    background-color: white;
+                    -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                    color: black;
                 }
-                background: rgba(${props.colors.darkrgba},0.15);
+                background: rgba(0,0,0,0.15);
                 border-radius: 6px; 
                 flex-basis: 1rem;
                 text-align: center;
@@ -107,26 +106,13 @@ export default function Template({
     }) {
     const { markdownRemark } = data // data.markdownRemark holds our post data
     const { frontmatter } = markdownRemark
-    const [colorState, setColorState] = useState(false);
-    const toggle = () => setColorState(!colorState)
-    let colors = colorState ? {
-            dark: '#27452B',
-            darkrgba: '39,69,43', 
-            light: '#D6D7B5',
-            lightrgba: '214,215,181'
-        } : {
-            dark: '#000',
-            darkrgba: '0,0,0', 
-            light: '#fff',
-            lightrgba: '255,255,255'
-        }
+
     return (
         <div css={css`
             display: flex;
             align-items: stretch;
         `} >
 
-            <Navbar handleClick={toggle} />
             <Global styles={css`
                 @import url('https://fonts.googleapis.com/css?family=Bitter|Lato:100i,300i,400|Libre+Baskerville|BioRhyme:700|Hepta+Slab:400,700|Ultra:400,700&display=swap');
                 * {
@@ -134,15 +120,11 @@ export default function Template({
                 }
                 body {
                     margin: 0 !important;
-                    background: url('${colorState ? wpg : wpc}');
-                    // background-position: center;
-                    background-size: cover;
-                    background-attachment: fixed;
                 }
             `} />
-            <Leftpanel image={frontmatter.image} text={frontmatter.shorttext} title={frontmatter.title} colors={colors} />
+            <Leftpanel image={frontmatter.image} text={frontmatter.shorttext} title={frontmatter.title} />
             <Maparea>
-                <iframe src={frontmatter.storymapurl}
+                <iframe title={frontmatter.image} src={frontmatter.storymapurl}
                     css={css`
                         width: 100%;
                         height: 100%;

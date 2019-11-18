@@ -43,8 +43,8 @@ export const jhMagee = {
 export const josephWhitehouse = {
 	image: 'josephWhitehouse',
 	name: 'The Frontier Soldier: Joseph Whitehouse',
-	desc: 'Coming soon...',
-	storymapurl: 'https://www.google.com',
+	desc: 'Dance with French ladies, hunt bears, and treaty with Indians as a soldier on the Lewis and Clark Expedition',
+	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/whitehouse/index.html',
 	dest: '1804-1805'
 }
 export const juliaNewberry = {
@@ -61,6 +61,13 @@ export const thx = {
 	storymapurl: ' https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/thanksgiving/index.html',
 	dest: 'Holiday bonus!'
 }
+export const raster = {
+	image: 'raster',
+	name: 'The Vacation Photographer: Lenore Raster',
+	desc: 'Travel with a Chicago-based, German-American family to see the sights on their Mississippi River vacations.',
+	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/raster/index.html',
+	dest: '1916-1922'
+}
 export const wolfej = {
 	image: 'wolfej',
 	name: 'The DIS Queen: Jen Slow Wolfe',
@@ -73,4 +80,16 @@ export const transcription = {
 	dest: '???',
 	button: 'Transcribe now!'
 }
-export const Travelers = [ thx, blackHawk, juliaNewberry,  jhMagee,  errettGraham,  eraBellThompson,  amyWingreen,  josephWhitehouse,  cgPearce, transcription ]
+export const Travelers = [ 
+	thx, 
+	juliaNewberry,  
+	blackHawk, 
+	errettGraham,  
+	eraBellThompson,  
+	amyWingreen,  
+	jhMagee,  
+	josephWhitehouse,  
+	// cgPearce, 
+	raster,
+	transcription 
+]

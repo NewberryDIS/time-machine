@@ -3,6 +3,6 @@ path: '/josephWhitehouse'
 image: 'josephWhitehouse'
 title: 'The Frontier Soldier: Joseph Whitehouse'
 shorttext: ''
-text: 'Now this quiet courtyard, Sunday afternoon, this girl with a random collection of European furniture, as though Deane had once intended to use the place as his home.'
-storymapurl: 'https://www.google.com'
+text: 'Dance with French ladies, hunt bears, and treaty with Indians as a soldier on the Lewis and Clark Expedition.'
+storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/whitehouse/index.html'
 ---

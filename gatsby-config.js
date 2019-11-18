@@ -6,6 +6,13 @@ module.exports = {
   },
   pathPrefix: `/time-machine`, 
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-5551324-4",
+        head: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,7 +28,6 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

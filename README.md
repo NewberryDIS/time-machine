@@ -1,4 +1,4 @@
-## Time Travel
+## Midwest Time Machine
 
 A series of StoryMaps using personal writings of historic figures.
 
