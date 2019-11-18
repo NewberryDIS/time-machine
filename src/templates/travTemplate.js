@@ -2,6 +2,7 @@ import { graphql, Link } from 'gatsby';
 /** @jsx jsx */
 import { css, jsx, Global } from '@emotion/core'
 import styled from "@emotion/styled";
+import { Helmet } from "react-helmet"
 
 import Navbar from '../components/navbar';
 
@@ -15,6 +16,7 @@ import juliaNewberrypic from '../images/tm-juliaNewberry.png';
 import wolfejpic from '../images/wolfej.png';
 import jhMageepic from '../images/tm-jhMagee.png';
 import eraBellThompsonpic from '../images/tm-eraBellThompson.png';
+import rasterpic from '../images/tm-raster.png';
 import thxpic from '../images/tm-thx.png';
 
 // const colors = {
@@ -43,6 +45,7 @@ const images = {
     'debord': debordpic,
     'jhMagee': jhMageepic,
     'eraBellThompson': eraBellThompsonpic,
+    'raster': rasterpic,
     'thx': thxpic,
 }
 const Maparea = styled.div` 
@@ -112,7 +115,10 @@ export default function Template({
             display: flex;
             align-items: stretch;
         `} >
-
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Newberry's Midwest Time Machine</title>
+            </Helmet>
             <Global styles={css`
                 @import url('https://fonts.googleapis.com/css?family=Bitter|Lato:100i,300i,400|Libre+Baskerville|BioRhyme:700|Hepta+Slab:400,700|Ultra:400,700&display=swap');
                 * {
