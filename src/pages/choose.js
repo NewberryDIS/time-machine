@@ -235,22 +235,21 @@ const Tile = ({ content }) =>
 
 export default class Choose extends React.Component {
     render() {
-        return ( <div>
-
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>Newberry's Midwest Time Machine</title>
-                </Helmet>
-                    <Global styles={css`
-                    @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
-                    body {
-                        margin: 0;
-                        background: url('${wpc}');
-                        // background-position: center;
-                        background-size: cover;
-                    }
-                `}/>
-            <Navbar />
+        return ( <div css={css`padding-top: 65px;`}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Newberry's Midwest Time Machine</title>
+            </Helmet>
+                <Global styles={css`
+                @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
+                body {
+                    margin: 0;
+                    background: url('${wpc}');
+                    // background-position: center;
+                    background-size: cover;
+                }
+            `}/>
+            <Navbar location={this.props.location} />
             <div className="container" css={css`
                 background-image: url('${wpc}');
                 background-size: cover;

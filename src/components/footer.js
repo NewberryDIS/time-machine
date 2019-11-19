@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 import witm from '../images/witm-sq.jpg';
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const FooterSection = styled.div`
     margin: 5px;
@@ -11,29 +12,34 @@ const FooterSection = styled.div`
         color: black;
         font-weight: 900;
         text-decoration: none;
-        background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
+        // background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
+        background-image: linear-gradient(to bottom, transparent 1px, black 2px); 
         background-position: 0% 105%;
         background-repeat: no-repeat;
         background-size: 0% 2px;
         transition: background-size .2s;
-        
         &:hover {
-            background-size: 100% 2px;
+            &.smlink {
+                background-size: 100% 2px;
+            }
+            &.lglink {
+                background-size: 100% 4px;
+            }
         }
     }
     padding: 15px 30px;
     border-radius: 6px; 
+    &.middle, &.right, &.left p {
+        font-size: 0.65rem;
+    }
     &.left {
         flex: 1;
     }
-    &.middle, &.right {
-        font-size: 0.65rem;
-    }
     &.middle {
-        flex: 4;
+        flex: 2;
     }
     &.right {
-        flex: 4;
+        flex: 2;
     }
     .emphasis {
         color: black;
@@ -41,6 +47,14 @@ const FooterSection = styled.div`
     }
     .witmimg {
         margin-bottom: 0;
+        max-width: 200px;
+        padding: 5px;
+        float: left;
+    }
+    .witmbox {
+        p {
+            padding: 5px;
+        }
     }
 `
 // data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
@@ -52,31 +66,37 @@ const FooterWrapper = styled.div`
     box-shadow:         inset 0 0 10px #000000;
     display: flex;
     flex-direction: row;
+    @media only screen and (max-width: 700px) {
+        flex-direction: column;
+    }
 `
 const Footer = (props) => {
     return (
         <FooterWrapper width={props.width}>
             <FooterSection className="left">
+                <div className="witmbox">
                     <img className="witmimg" src={witm} alt="" />
-                <a target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/contact-librarian">
+                    <p>Part of <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/what-is-the-midwest-exhibition">What Is the Midwest</OutboundLink>, a multidisciplinary project funded by The Andrew W. Mellon Foundation</p>
+                </div>
+                <OutboundLink className="lglink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/contact-librarian">
                     Contact Us
-                </a>
+                </OutboundLink>
             </FooterSection>
             <FooterSection className="middle">
                 Except where otherwise noted, contextual content on this site is made available under a &nbsp;
-                <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/share-your-work/public-domain/cc0/">
+                <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/share-your-work/public-domain/cc0/">
                     Creative Commons Public Domain license. &nbsp;
-                </a>
+                </OutboundLink>
                 Digitized images and other media from the Newberry's collections are made available for any lawful purpose, commercial or non-commercial, without licensing or permission fees to the library, subject to the following terms and conditions:&nbsp;
-                <a target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/rights-and-reproductions">
+                <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/rights-and-reproductions">
                     Newberry Rights and Reproductions Policy. 
-                </a>
+                </OutboundLink>
             </FooterSection>
             <FooterSection className="right">
-                <p>Edited by <a href="https://www.newberry.org/staff-biographies#wolfe" target="_blank" rel="noopener noreferrer">Jen Wolfe</a> and developed by <span className="emphasis">Nick White</span> of the Newberry’s Digital Initiatives and Services department. 
-                Code is available for repurposing: <a href="https://github.com/newberrydis/time-machine">Midwest Time Machine repository</a>.  
-                Interactive maps created using the open-source software <a href="https://storymap.knightlab.com/" target="_blank" rel="noopener noreferrer">StoryMapJS</a>. 
-                Grateful acknowledgement to &nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.wbez.org/shows/curious-city/7b79e16d-f3a9-4156-9b27-4d2cc6ce351e?_ga=2.28540796.1753639261.1569526664-1089342726.1568933062">WBEZ’s Curious City&nbsp;</a>and the inspiration from their site &nbsp;<a target="_blank" rel="noopener noreferrer" href="http://interactive.wbez.org/curiouscity/1910train/">If you toured Chicago in 1910, what would you do?</a></p>
+                <p>Edited by <OutboundLink className="smlink" href="https://www.newberry.org/staff-biographies#wolfe" target="_blank" rel="noopener noreferrer">Jen Wolfe</OutboundLink> and developed by <span className="emphasis">Nick White</span> of the Newberry’s Digital Initiatives and Services department. 
+                Code is available for repurposing: <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://github.com/newberrydis/time-machine">Midwest Time Machine repository</OutboundLink>.  
+                Interactive maps created using the open-source software <OutboundLink className="smlink" href="https://storymap.knightlab.com/" target="_blank" rel="noopener noreferrer">StoryMapJS</OutboundLink>. 
+                Grateful acknowledgement to &nbsp;<OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://www.wbez.org/shows/curious-city/7b79e16d-f3a9-4156-9b27-4d2cc6ce351e?_ga=2.28540796.1753639261.1569526664-1089342726.1568933062">WBEZ’s Curious City&nbsp;</OutboundLink>and the inspiration from their site &nbsp;<OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="http://interactive.wbez.org/curiouscity/1910train/">If you toured Chicago in 1910, what would you do?</OutboundLink></p>
             </FooterSection>
         </FooterWrapper>
     )

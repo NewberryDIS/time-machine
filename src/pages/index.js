@@ -46,8 +46,8 @@ const Splash = styled.div`
     display: flex; 
     justify-content: center;
     margin: 10px auto;
-    padding: 50px;
-    padding-bottom: 20px;
+    padding: 85px 50px 20px 50px;
+    // padding-bottom: 20px;
     position: relative;
 `
 const Splashleft = styled.div`
@@ -84,26 +84,13 @@ const Halfground  = styled.div`
     // @media (max-width: 1100px) {width: 85%;} 
     // @media (max-width: 750px) {width: 100%;} 
 `
-function Main() {
-    // const [colorState, setColorState] = useState(false);
-    // const toggle = () => setColorState(!colorState)
-    // let colors = colorState ? {
-    //     dark: '#27452B',
-    //     darkrgba: '39,69,43', 
-    //     light: '#D6D7B5',
-    //     lightrgba: '214,215,181'
-    // } : {
-    //     dark: '#000',
-    //     darkrgba: '0,0,0', 
-    //     light: '#fff',
-    //     lightrgba: '255,255,255'
-    // }
+function Main(props) {
     return <div className="wrapper">
         <Helmet>
             <meta charSet="utf-8" />
             <title>Newberry's Midwest Time Machine</title>
         </Helmet>
-        <Navbar />
+        <Navbar location={props.location} />
         <Global styles={css`
                     @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
                     * {
@@ -217,7 +204,7 @@ function Main() {
                     <Title className="upper title">Midwest</Title>
                     <Title className="lower title">Time Machine</Title>
                     <Text className="text">Travel to the past via first-hand accounts from letters, diaries, and rare books in the Newberry's collections</Text>
-                    <Text className="text">Witness the Chicago Fire, settle the frontier, and marvel at the World's Fair through manuscripts transcribed by our online volunteers!</Text>
+                    <Text className="text">Witness the Chicago Fire, join the Lewis and Clark expedition, and marvel at the World's Fair through manuscripts transcribed by our online volunteers!</Text>
                     <Link to="/choose/" 
                         css={css`
                             text-align: center;

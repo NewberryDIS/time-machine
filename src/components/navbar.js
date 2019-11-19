@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from "@emotion/styled";
+import { Link } from 'gatsby'
 import logob from '../images/Newberry_N.svg';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 /** @jsx jsx */
@@ -8,9 +9,9 @@ import { css, jsx } from '@emotion/core'
 
 const Navchunk = styled.div`
     z-index: 2;
-    // position: fixed;
-    // top: 5px;
-    // left: 7px;
+    position: fixed;
+    top: 5px;
+    left: 7px;
     margin: 7px 0 0 5px;
     height: 60px;
     padding: 0 5px;
@@ -57,18 +58,39 @@ const Navchunk = styled.div`
         width: 40px;
         background-size: cover;
     }
+    #nav-chooselink {
+        @media only screen and (min-width: 900px) {
+            display: none;
+        }
+    }
 `
 
 export default class Navbar extends React.Component {
     render(){
         return(
-            <Navchunk onClick={this.props.handleClick} className="navleft" >
+            <Navchunk className="navleft" >
                     <OutboundLink href="http://www.newberry.org" className="nav-n-logo">
                         <img alt="Newberry Logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-                    </OutboundLink>
-                    <OutboundLink href="https://publications.newberry.org/time-machine/"className="nav-textlink">
-                        &gt; Time Machine
-                    </OutboundLink>
+                    </OutboundLink>{console.log(this.props.location.pathname)}
+                    {   this.props.location.pathname === '/time-machine/' ? 
+                            <Link to="/" className="nav-textlink" id="nav-homelink">
+                                &gt; Digital Newberry
+                            </Link> 
+                        : 
+                            this.props.location.pathname === '/time-machine/choose/' ? 
+                                <Link to="/" className="nav-textlink" id="nav-homelink">
+                                    &gt; Time Machine
+                                </Link> 
+                            : 
+                                <Fragment>
+                                    <Link to="/" className="nav-textlink" id="nav-homelink">
+                                        &gt; Time Machine
+                                    </Link>
+                                    <Link to="/choose" className="nav-textlink" id="nav-chooselink">
+                                        &gt; Swap Traveler
+                                    </Link>
+                                </Fragment>
+                    }
             </Navchunk>
         )
     }
