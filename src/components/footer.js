@@ -52,9 +52,8 @@ const FooterSection = styled.div`
         float: left;
     }
     .witmbox {
-        p {
-            padding: 5px;
-        }
+        // padding: 5px;
+        margin-bottom: 5px;
     }
 `
 // data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
@@ -74,10 +73,9 @@ const Footer = (props) => {
     return (
         <FooterWrapper width={props.width}>
             <FooterSection className="left">
-                <div className="witmbox">
-                    <img className="witmimg" src={witm} alt="" />
-                    <p>Part of <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/what-is-the-midwest-exhibition">What Is the Midwest</OutboundLink>, a multidisciplinary project funded by The Andrew W. Mellon Foundation</p>
-                </div>
+                <p className="witmbox">
+                    Part of <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/what-is-the-midwest-exhibition">What Is the Midwest</OutboundLink>, a multidisciplinary project funded by The Andrew W. Mellon Foundation
+                </p>
                 <OutboundLink className="lglink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/contact-librarian">
                     Contact Us
                 </OutboundLink>

@@ -19,7 +19,8 @@ import jhMagee from '../images/tm-jhMagee.png';
 import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
 import cgPearce from '../images/tm-cgPearce.png';
-import thx from '../images/tm-thx.png';
+// import thx from '../images/tm-thx.png';
+import xmas from '../images/tm-xmas.png';
 import raster from '../images/tm-raster.png';
 import noone from '../images/noone.png';
 import wpc from '../images/time-machine-splash-background.jpg';
@@ -40,7 +41,7 @@ const images = {
     'noone': noone,
     'raster': raster,
     'eraBellThompson': eraBellThompson,
-    'thx': thx
+    'xmas': xmas
 };
 const Masonrycontainer = styled.div`
     width: 85%;
@@ -194,7 +195,7 @@ const Tile = ({ content }) =>
             margin: 0;
             overflow-wrap: normal;
         }
-        & .tilecap, .tilecapthx {
+        & .tilecap, .tilecapSeasonal {
             font-family: 'Lato', sans-serif;
             position: absolute;
             top: -2px;
@@ -211,16 +212,16 @@ const Tile = ({ content }) =>
             border: 2px solid #27452B;
             border-bottom: 2px solid transparent;
         }
-        & .tilecapthx {
+        & .tilecapSeasonal {
             color: white;
-            background: orange;
+            background: ${content.capcolor};
             line-height: 52px;
             border: 2px solid #27452B;
             border-bottom: 2px solid transparent;
         }
     `}>
-        {content.image === 'thx' ? 
-            <div className="tilecapthx">{content.dest}</div>
+        {content.type === 'seasonal' ? 
+            <div className="tilecapSeasonal">{content.dest}</div>
             : <div className="tilecap">Destination:<br />{content.dest}</div>}
         <img css={css`
                 padding: 55px 25px 5px 25px;
