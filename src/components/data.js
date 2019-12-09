@@ -100,7 +100,7 @@ export const Travelers = [
 	amyWingreen,  
 	jhMagee,  
 	josephWhitehouse,  
-	// cgPearce, 
+	cgPearce, 
 	raster,
 	transcription 
 ]

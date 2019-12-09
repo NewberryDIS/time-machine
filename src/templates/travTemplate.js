@@ -17,6 +17,7 @@ import wolfejpic from '../images/wolfej.png';
 import jhMageepic from '../images/tm-jhMagee.png';
 import eraBellThompsonpic from '../images/tm-eraBellThompson.png';
 import rasterpic from '../images/tm-raster.png';
+import cgPearce from '../images/tm-cgPearce.png';
 import thxpic from '../images/tm-thx.png';
 
 // const colors = {
@@ -45,6 +46,7 @@ const images = {
     'debord': debordpic,
     'jhMagee': jhMageepic,
     'eraBellThompson': eraBellThompsonpic,
+    'cgPearce': cgPearce,
     'raster': rasterpic,
     'thx': thxpic,
 }

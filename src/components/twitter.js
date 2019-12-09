@@ -26,7 +26,7 @@ const TwitterButton = () => (
             margin: 0;
         }
     `}>
-        <OutboundLink href="http://twitter.com" className="twittericon">
+        <OutboundLink href="https://twitter.com/DigitalNewberry" rel="noopener noreferrer" target="_blank" className="twittericon">
             <img src={twicon} alt="twitter icon"/>
         </OutboundLink>
     </div>
