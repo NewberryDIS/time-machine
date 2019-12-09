@@ -11,6 +11,7 @@ import blackHawk from '../images/tm-blackHawk.png';
 import errettGraham from '../images/tm-errettGraham.png';
 import juliaNewberry from '../images/tm-juliaNewberry.png';
 import '../components/layout.css'
+import TwitterButton from '../components/twitter';
 
 const Text  = styled.div`
     font-family: 'Lato', sans-serif;
@@ -91,6 +92,7 @@ function Main(props) {
             <title>Newberry's Midwest Time Machine</title>
         </Helmet>
         <Navbar location={props.location} />
+        <TwitterButton />
         <Global styles={css`
                     @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
                     * {

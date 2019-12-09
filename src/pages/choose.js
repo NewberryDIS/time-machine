@@ -26,6 +26,7 @@ import noone from '../images/noone.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 import paper from '../images/paper.png';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import TwitterButton from '../components/twitter';
 
 
 let breakPoints = [350, 500, 750, 1050];
@@ -208,7 +209,6 @@ const Tile = ({ content }) =>
         }
         & .tilecap {
             background: ${content.button ? '#284883' : '#641818' };
-
             border: 2px solid #27452B;
             border-bottom: 2px solid transparent;
         }
@@ -251,6 +251,7 @@ export default class Choose extends React.Component {
                 }
             `}/>
             <Navbar location={this.props.location} />
+            <TwitterButton />
             <div className="container" css={css`
                 background-image: url('${wpc}');
                 background-size: cover;

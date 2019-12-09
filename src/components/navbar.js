@@ -4,7 +4,9 @@ import { Link } from 'gatsby'
 import logob from '../images/Newberry_N.svg';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/core' 
+
+import paper from '../images/paper.png';
 
 
 const Navchunk = styled.div`
@@ -31,7 +33,10 @@ const Navchunk = styled.div`
         -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
         box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
         border: 2px solid white;
-        background: rgba(0,0,0,0.65);
+        // background: rgba(0,0,0,0.65);
+        background-image: url(${paper});
+        background: #641818;
+        // background: #284883;
         & .nav-textlink {
             color: white;
         }
