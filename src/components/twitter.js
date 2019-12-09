@@ -10,7 +10,7 @@ const TwitterButton = () => (
         width: 60px;
         height: 60px;
         position: absolute;
-        top: 10px;
+        top: 12px;
         right: 10px;
         border-radius: 8px;
         background-image: url(${paper});
