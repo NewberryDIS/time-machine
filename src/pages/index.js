@@ -34,15 +34,16 @@ const Title  = styled.p`
         line-height: calc(5vw);
     }
     &.lower {
-        font-size: calc(5.5vw + 8px);
+        font-size: calc(4vw + 12px);
         margin: 0 0 10px 0;
-        line-height: calc(5vw + 12px);;
+        line-height: calc(4vw + 12px);;
     }
 `
 const Splash = styled.div`
     margin: 100px auto;
     padding: 30px;
     width: 80%;
+    @media (min-width: 967px) {width: 60%;} 
     border-radius: 3px;                        
     border: 2px solid rgba(0,0,0,1); 
     background: rgba(255,255,255,0.85);
@@ -133,6 +134,8 @@ const Splash = styled.div`
 const CirclePanel = styled.div`
     position: absolute;
     display: flex;
+    // jen's alleged disappearing circlefaces 
+    // flex-wrap: wrap;
     @media (min-width: 800px) {
         justify-content: flex-start;
         flex-direction: column;

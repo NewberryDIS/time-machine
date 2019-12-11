@@ -74,7 +74,7 @@ const Footer = (props) => {
         <FooterWrapper width={props.width}>
             <FooterSection className="left">
                 <p className="witmbox">
-                    Part of <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/what-is-the-midwest-exhibition">What Is the Midwest</OutboundLink>, a multidisciplinary project funded by The Andrew W. Mellon Foundation
+                    Part of <OutboundLink className="smlink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/whatisthemidwest">What Is the Midwest</OutboundLink>, a multidisciplinary project funded by The Andrew W. Mellon Foundation
                 </p>
                 <OutboundLink className="lglink" target="_blank" rel="noopener noreferrer" href="https://www.newberry.org/contact-librarian">
                     Contact Us
