@@ -7,6 +7,7 @@ import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import '../components/layout.css'
 
 // images
@@ -20,12 +21,11 @@ import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
 import cgPearce from '../images/tm-cgPearce.png';
 // import thx from '../images/tm-thx.png';
-import xmas from '../images/tm-xmas.png';
+// import xmas from '../images/tm-xmas.png';
 import raster from '../images/tm-raster.png';
 import noone from '../images/noone.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 import paper from '../images/paper.png';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import TwitterButton from '../components/twitter';
 
 
@@ -42,7 +42,7 @@ const images = {
     'noone': noone,
     'raster': raster,
     'eraBellThompson': eraBellThompson,
-    'xmas': xmas
+    // 'xmas': xmas
 };
 const Masonrycontainer = styled.div`
     width: 85%;
