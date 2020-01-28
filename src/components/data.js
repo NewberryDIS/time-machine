@@ -2,14 +2,14 @@ export const amyWingreen = {
 	image: 'amyWingreen',
 	name: 'The Military Nurse: Amy Wingreen',
 	desc: 'Brave scorpions, yellow fever and privations nursing wounded soldiers in the Spanish American War.',
-	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/wingreen/index.html',
+	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/amyWingreen/index.html',
 	dest: '1898-1900'
 }
 export const blackHawk = {
 	image: 'blackHawk',
 	name: 'The War Chief: Black Hawk',
 	desc: 'Battle alongside the Sauk leader as he defends his land from rival tribes and white settlers.',
-	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/black-hawk/index.html',
+	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/blackHawk/index.html',
 	dest: '1767-1812'
 }
 export const cgPearce = {

@@ -1,0 +1,122 @@
+{
+    "storymap": {
+        "call_to_action": true,
+        "zoomify": {
+            "path": "https://publications.newberry.org/storymap/time-travel/black-hawk-map/",
+            "width": 6750,
+            "height": 9250
+        },
+        "slides": [
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/black-hawk/_images/black-hawk.JPG",
+                    "caption": "<a target=\"_new\" href=\"http://collections.carli.illinois.edu/cdm/ref/collection/nby_eeayer/id/58536\">Mac-Cut-I-Mish-E-Ca-Cu-Cac or Black Hawk, lithograph by James Otto Lewis, 1836.</a> Newberry Library",
+                    "credit": ""
+                },
+                "type": "overview",
+                "location": {
+                    "line": true
+                },
+                "text": {
+                    "headline": "Black Hawk in the midwest, 1767-1812",
+                    "text": "<div>A warrior of the Thakiwaki (Sauk) tribe, Black Hawk (1767-1838) grew up in a village on the Rock River, near the site of present-day Rock Island, Illinois. He led his people in the War of 1812,&nbsp;fighting alongside the British, and during the 1832 Black Hawk War, against the United States. Following his capture and imprisonment in 1832, Black Hawk told his life story to an&nbsp;interpreter and a newspaper editor, and published the first Native American autobiography in the U.S. <i>Life of Ma-Ka-Tai-Me-She-Kia-Kiak or Black Hawk</i>, became an instant bestseller and a classic text for those studying settler-colonial violence in the United States.<br></div><div><br></div><div>Book excerpts from:&nbsp;Life of Ma-ka-tai-me-she-kia-kiak or Black Hawk, 1833. Newberry Library&nbsp;<a href=\"https://archive.org/details/GR_313/page/n6\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://archive.org/details/GR_313/page/n6\">View at Internet Archive</a> | Map: Ornamental map of the United States &amp; Mexico, 1846. Newberry Library&nbsp;<a href=\"https://archive.org/details/Map6F_G3700_1847_P5\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://archive.org/details/Map6F_G3700_1847_P5\">View at Internet Archive</a></div><div><br><strong><em>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "https://ia800900.us.archive.org/35/items/Ayer_251_S2571_B6_D7_1838_Life_and_Adventures_of_Black_Hawk_title_page/Ayer_251_S2571_B6_D7_1838_Life_and_Adventures_of_Black_Hawk_title_page_o2.jpg",
+                    "caption": "<a target=\"_new\" href=\"https://archive.org/details/Ayer_251_S2571_B6_D7_1838_Life_and_Adventures_of_Black_Hawk_title_page\">Life & Adventures of Black Hawk, title page, 1838.</a> Newberry Library",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 72.47527631092942,
+                    "line": true,
+                    "lon": -94.306640625,
+                    "zoom": 5
+                },
+                "text": {
+                    "headline": "Sac Village, 1767",
+                    "text": "<div>\"I was born at the Sac Village, on Rock River, in the year 1767...<br></div><div><br></div><div>\"Few, if any, events of note, transpired within my recollection, till \nabout my fifteenth year. I was not allowed to paint, or wear feathers; \nbut distinguished myself, at that early age, by wounding an enemy; \nconsequently, I was placed in the ranks of the Braves!\"<br><br></div><div>--Life of Black Hawk, or Ma-ka-tai-me-she-kia-kiak&nbsp;<a href=\"https://archive.org/details/GR_313/page/n6\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://archive.org/details/GR_313/page/n6\">View digitized item</a><br><br><strong><em><small>Help with historical scholarship!&nbsp;</small></em></strong><small><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</strong></em></a></span></small><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/black-hawk/_images/Ayer_249_M2_1838_VL02_00026_o3.jpg",
+                    "caption": "\"Ma-ka-tai-me-she-kia-kiah or Black Hawk a Sauxe Brave,\" portrait from History of the Indian Tribes of North America with biographical sketches and anecdotes of the principal chiefs, 1838. Newberry Library <a target=\"_blank\" href=\"https://webvoyage.carli.illinois.edu/nby/nby/cgi-bin/Pwebrecon.cgi?DB=local&v1=1&BBRecID=626130\">View catalog record</a>",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 69.93030017617484,
+                    "line": true,
+                    "lon": -92.1533203125,
+                    "zoom": 5,
+                    "use_custom_marker": false
+                },
+                "text": {
+                    "headline": "Merimack, 1786",
+                    "text": "<div>\"Our attention was directed towards an ancient enemy, who had decoyed and murdered some of our helpless women and children. I started, with my father, who took command of a small party, and proceeded against the enemy. We met near Merimack, and an action ensued, the Cherokees having greatly the advantage in numbers.<br></div><div><br></div><div>\"Early in this engagement my father was wounded in the thigh... Nothing could be done for him. The <em>medicine man </em>said the wound was <em>mortal!</em> from which he soon after <em>died!</em> ... I now fell heir to the great <em>medicine bag</em> of my forefathers, which had belonged to my father.\"<br></div><div><br></div><div>--Life of Black Hawk, or Ma-ka-tai-me-she-kia-kiak&nbsp;<a href=\"https://archive.org/details/GR_313/page/n6\" target=\"_blank\" rel=\"nofollow\">View digitized item</a><br><br><strong><em>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/black-hawk/_images/Cheyenne_camp_attacked_at_Powder_River_by_soldiers_Mackenzies_Fall_of_1876.jpg",
+                    "caption": "<a target=\"_new\" href=\"http://collections.carli.illinois.edu/cdm/ref/collection/nby_eeayer/id/2384\">Soldiers attacking a Cheyenne camp, drawing by Black Horse, 1876.</a> Newberry Library",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 73.92855278552233,
+                    "line": true,
+                    "lon": -95.11962890625,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "Prairie du chien, 1812",
+                    "text": "<div>\"News reached us that a war was going to take place between the British and the Americans. The British agent, Col. Dixon, was holding <em>talks </em>with, and making presents to, the different tribes. I had not made up my mind whether to join the British, or remain neutral. <em>I had not discovered one good trait in the character of the Americans that had come to the country! </em>They made <em>fair promises,</em> but <em>never fulfilled them! </em>Whilst the <em>British</em> made but few -- but we could always <em>rely upon their word!</em><br></div><div><em><br></em></div><div>\"...Why did the Great Spirit ever send the whites to this island, to <em>drive</em> us from our homes, and introduce among us <em>poisonous liquors, disease, and death?\"</em><br><em></em></div><div><em><br></em></div><div>--Life of Black Hawk, or Ma-ka-tai-me-she-kia-kiak&nbsp;<a href=\"https://archive.org/details/GR_313/page/n6\" target=\"_blank\" rel=\"nofollow\">View digitized item</a><br><br><strong><em>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/black-hawk/_images/chicago.JPG",
+                    "caption": "<a target=\"_new\" href=\"https://archive.org/details/Case_F5484_P46_Vault_Pencil_drawing_of_Old_Fort_Dearborn\">Old Fort Dearborn, Chicago, drawing, 1831.</a> Newberry Library",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 72.90026386809494,
+                    "line": true,
+                    "lon": -88.43994140625,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "Chicago, 1812",
+                    "text": "<div>\"We passed Chicago. The fort had been evacuated by the American soldiers, who had marched for fort Wayne. They were attacked a short distance from that fort, and <em>defeated! </em>They had a considerable quantity of powder in the fort at Chicago, which they had <em>promised to the Indians; </em>but the night before they marched, they destroyed it. I think it was thrown into the well! If they had fulfilled their word to the Indians, I think they would have gone safe.\"<br></div><div><br></div><div>--Life of Black Hawk, or Ma-ka-tai-me-she-kia-kiak&nbsp;<a href=\"https://archive.org/details/GR_313/page/n6\" target=\"_blank\" rel=\"nofollow\">View digitized item</a><br><br><strong><em>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "https://cdn.loc.gov/service/pnp/ppmsca/15800/15857v.jpg",
+                    "caption": "<a target=\"_new\" href=\"https://www.loc.gov/item/2007684709/\">Unidentified Sauk Indian family portrait, 1899.</a> Library of Congress",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 72.52812972966163,
+                    "line": true,
+                    "lon": -94.306640625,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "Sac Village, 1812",
+                    "text": "<div>\"I then started to visit my wife and children. I found them well, and my boys were growing finely. It is not customary for us to say much about our women, as they generally perform their part cheerfully, and <em>never interfere with business belonging to the men! </em>This is the only wife I ever had, or ever will have. She is a good woman, and teaches my boys to be <em>brave!</em> Here I would have rested myself, and enjoyed the comforts of my lodge, but I could not: I had promised to avenge the death of my adopted son!\"<br><br></div><div>--Life of Black Hawk, or Ma-ka-tai-me-she-kia-kiak&nbsp;<a href=\"https://archive.org/details/GR_313/page/n6\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://archive.org/details/GR_313/page/n6\">View digitized item</a><br><br><strong><em>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</strong></em></a></span><br></div>"
+                }
+            }
+        ],
+        "map_type": "zoomify",
+        "call_to_action_text": "",
+        "map_as_image": false
+    }
+}

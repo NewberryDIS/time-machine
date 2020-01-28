@@ -1,0 +1,125 @@
+{
+    "storymap": {
+        "call_to_action": true,
+        "zoomify": {
+            "path": "http://publications.newberry.org/storymap/time-travel/julia-newberry-map/",
+            "width": 6750,
+            "height": 5750
+        },
+        "slides": [
+            {
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/julia-newberry/_images/julia-newberry-portrait-6191862.jpg",
+                    "caption": "Julia Newberry portrait by G.P.A. Healy, 1875. Newberry Library",
+                    "credit": ""
+                },
+                "location": {
+                    "line": true
+                },
+                "background": {
+                    "url": ""
+                },
+                "text": {
+                    "headline": "Julia Newberry in the midwest and east coast, 1869-1871",
+                    "text": "<div><div>\"An amazingly vivid young person,\" was&nbsp;Kirkus Reviews'&nbsp;characterization of Julia Newberry (1853-1877) upon the 1933&nbsp;publication of her <a href=\"https://www.kirkusreviews.com/book-reviews/julia-newberry/julia-newberrys-diary/\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://www.kirkusreviews.com/book-reviews/julia-newberry/julia-newberrys-diary/\">\"charming and revealing and intensely human little diary.\"</a></div><div><br></div><div>The daughter of Chicago shipping magnate Walter Loomis Newberry, a teenaged Julia recorded details of her life traveling in America's wealthiest circles. Eventually, however, tales of exclusive boarding schools, fortune-hunting suitors, and vacations abroad gave way to accounts of ill health suffered by Julia and her sister Mary. When the family line ended with their early deaths, their father's estate was bequeathed to found the Newberry Library.<br><br></div></div><div>Manuscript excerpts from: Julia Newberry diary, 1869-1871. Newberry Library <a href=\"https://publications.newberry.org/transcription/mms-transcribe/items/show/215\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://publications.newberry.org/transcription/mms-transcribe/items/show/215\">View at Newberry Transcribe</a> | Map: Mitchell's Map of the United States, 1835.&nbsp;Newberry Library&nbsp;<a href=\"https://archive.org/details/H_6083_58_2\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://archive.org/details/H_6083_58_2\">View at Internet Archive</a><br><br><strong><em><small>Help with historical scholarship!&nbsp;</small></em></strong><small><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</strong></em></a></span></small><br></div><div><em></em></div>"
+                },
+                "date": "",
+                "type": "overview"
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/julia-newberry/_images/Street_Raising_on_Lake_Street.jpg",
+                    "caption": "<a target=\"_blank\" href=\"http://www.encyclopedia.chicagohistory.org/pages/3292.html\">Lake Street between Clark & LaSalle, lithograph by Edward Mendel, 1857.</a> ICHi-00698, Chicago Historical Society",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 71.37110941823617,
+                    "line": true,
+                    "lon": -79.27734374999999,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "Chicago, Illinois, June 18, 1869",
+                    "text": "<div>\"Europe is a dream, Miss Pelel's a myth, while hotels, bad eating, &amp; sea sickness, are things of the past. I know that it won't last but a few months, nevertheless I am home, yes actually at home. Here I am in the old house, where I was born, &amp; where I wish I could always live; it is the dearest place on earth to me &amp; worth all London Paris &amp; New York put together. Sister &amp; Mother may talk &amp; say what they like, still I shall persist in my opinion, that there is no place equal to Chicago &amp; no place like home.\"&nbsp;<br></div><div><br></div><div>--View <span><a href=\"https://publications.newberry.org/transcription/mms-transcribe/scripto/transcribe/215/48338\" target=\"_blank\" rel=\"nofollow\">this page</a> or <a href=\"https://publications.newberry.org/transcription/mms-transcribe/items/show/215\" target=\"_blank\" rel=\"nofollow\">all pages in this set</a> at Newberry Transcribe<br></span><br><strong><em><small>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</small></strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/julia-newberry/_images/wedding.JPG",
+                    "caption": "<a target=\"_new\" href=\"https://publications.newberry.org/transcription/mms-transcribe/scripto/transcribe/215/48369\">Low-Pierpont wedding, illustration by Julia Newberry, 1869.</a> Julia Newberry diary, Newberry Library",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 65.96437717203096,
+                    "line": true,
+                    "lon": 35.244140625,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "Brooklyn, New York, Dec. 9, 1869",
+                    "text": "<div>\"The Low Pierpont wedding came off Thursday, December 9th &amp; it was supremely gorgeous! Mamma &amp; I arrived early at the church, three interesting 'ushers' in white satin favours assigned us front seats. No one but invited guests were admitted &amp; the seats were soon filled with what the 'papers' would have called the 'elite' of Brooklyn &amp; New York. Every one was very 'swell,' &amp; the scene was quite animated. The organ played a variety of lively tunes &amp; finally at one o'clock swelled into a wedding march, &amp; the bridal procession entered...\"<br></div><div><br></div><div>--View <span><a href=\"https://publications.newberry.org/transcription/mms-transcribe/scripto/transcribe/215/48367\" target=\"_blank\" rel=\"nofollow\">this page</a> or <a href=\"https://publications.newberry.org/transcription/mms-transcribe/items/show/215\" target=\"_blank\" rel=\"nofollow\">all pages in this set</a> at Newberry Transcribe<br></span><br><strong><em><small>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</small></strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/julia-newberry/_images/A_Grim_Monster_Alligator.jpg",
+                    "caption": "<a target=\"_blank\" href=\"http://collections.carli.illinois.edu/cdm/ref/collection/nby_teich/id/429371\">A grim monster, postcard, early 20th c.</a> DPC8206, Curt Teich Postcard Archives Collection. Newberry Library",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": -35.532226227703376,
+                    "line": true,
+                    "lon": -27.861328125,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "St. Augustine, Florida, Mar. 16, 1870",
+                    "text": "\"I made Jack Foster's acquaintance when I first arrived. He is very homely &amp; wears shockingly old fashioned clothes, checked pantaloons for instance. On the other hand, his blood is blue, his connections splendid, his manners excellent. He made me a present of a beautiful little alligator, about eight inches long. When I first got him, everyone announced that he would die; I said he should not, we have fed him on raw beef &amp; he is more lively than ever. I have named him Jack &amp; shall take him home.\"<br><br><div>--View <span><a href=\"https://publications.newberry.org/transcription/mms-transcribe/scripto/transcribe/215/48376\" target=\"_blank\" rel=\"nofollow\">this page</a> or <a href=\"https://publications.newberry.org/transcription/mms-transcribe/items/show/215\" target=\"_blank\" rel=\"nofollow\" title=\"Link: https://publications.newberry.org/transcription/mms-transcribe/items/show/215\">all pages in this set</a> at Newberry Transcribe<br></span><br><strong><em><small>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</small></strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/julia-newberry/_images/case_y_148_1585_13_o3.jpg",
+                    "caption": "<i>[The art] of making fire-works</i> ([London]: A. Park, [1840?]). Newberry Library. <a target=\"_blank\" href=\"https://webvoyage.carli.illinois.edu/nby/cgi-bin/Pwebrecon.cgi?DB=local&v1=1&BBRecID=289163\">View catalog record</a>",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 75.03901279805076,
+                    "line": true,
+                    "lon": 24.1259765625,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "Utica, New york, July 5, 1870",
+                    "text": "<div>\"Yesterday the fourth was slow, as the fourth of July always is. I played, painted, &amp; sent Nick to buy me some fireworks. In the evening we fired them off, which was very amusing. Mollie set fire to her dress with a roman candle, &amp; narrowly escaped, by Nick Kernan's throwing his coat around her. <br><br></div><div>\"I have just read Mrs Gaskell's <em>Life of Charlotte Bronte</em>, &amp; I enjoyed it immensely, almost as much as <em>Jane Eyre</em>.\"&nbsp;<br></div><div><br></div><div>--View <span><a href=\"http://publications.newberry.org/transcription/mms-transcribe/scripto/transcribe/215/48402\" target=\"_blank\" rel=\"nofollow\">this page</a> or <a href=\"http://publications.newberry.org/transcription/mms-transcribe/scripto/transcribe/215/48402\" target=\"_blank\" rel=\"nofollow\">all pages in this set</a> at Newberry Transcribe<br></span><br><strong><em><small>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</small></strong></em></a></span><br></div>"
+                }
+            },
+            {
+                "date": "",
+                "media": {
+                    "url": "//uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/julia-newberry/_images/Capture.JPG",
+                    "caption": "<a target=\"_blank\" href=\"http://collections.carli.illinois.edu/cdm/ref/collection/nby_chicago/id/1540\">LaSalle & Monroe Streets, Chicago, photograph by C.R. Clark, 1871.</a> Newberry Library",
+                    "credit": ""
+                },
+                "location": {
+                    "lat": 71.38514208411495,
+                    "line": true,
+                    "lon": -79.3212890625,
+                    "zoom": 12
+                },
+                "text": {
+                    "headline": "Chicago, Illinois, Oct. 17, 1871",
+                    "text": "<div>\"The fire began at Twelfth Street on Sunday night. It swept the two magnificent avenues &amp; every building on the South Side from Twelfth Street to the river. The Court House, the beautiful Crosbie Opera house, a perfect bijoux of a theatre, all the banks, insurance offices, railway depots, churches &amp; block after block of stores, unequaled any where. And then oh misery, the fire, the red, angry, unrelenting fire, leapt across the river &amp; burnt &amp; burnt, till Mr. Mahlon Ogden's house was the only one left standing up to Lincoln Park. Yes the whole North Side is in ashes, literally in ashes &amp; every memory connected with my home is gone, every association, every link; never never to be again, irreparably &amp; irrevocably gone.\"<br></div><div><br></div><div>--View <span><a href=\"http://publications.newberry.org/transcription/mms-transcribe/scripto/transcribe/215/48466\" target=\"_blank\" rel=\"nofollow\">this page</a> or <a href=\"http://publications.newberry.org/transcription/mms-transcribe/items/show/215\" target=\"_blank\" rel=\"nofollow\">all pages in this set</a> at Newberry Transcribe<br></span><br><strong><em><small>Help with historical scholarship!&nbsp;</em></strong><span><em>Create or review transcriptions to make handwritten letters and diaries easier to find, search, and browse. Start now at&nbsp;</em><a href=\"https://publications.newberry.org/digital/mms-transcribe/index\" target=\"_blank\" rel=\"nofollow\"><em><strong>Newberry Transcribe</small></strong></em></a></span><br></div>"
+                }
+            }
+        ],
+        "map_background_color": "#edebe7",
+        "map_type": "zoomify",
+        "call_to_action_text": "",
+        "map_as_image": false
+    }
+}

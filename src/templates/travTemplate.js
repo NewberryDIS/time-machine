@@ -81,7 +81,6 @@ const Leftpanel = ( props ) => (
     `}>
         <div css={css`width: 80%; margin: 15% auto; flex-grow: 1;`} >
             <img css={css`display: block; margin: auto; max-width: 150px; filter: drop-shadow(0 0 0.25rem black);`} src={images[props.image]} alt="" />
-            {console.log(images[props.image])}
             <p css={css`padding-top: 35px; font-size: calc(12px + 1vw); line-height: 2.25rem;font-family: 'Hepta Slab',serif; text-align: center;`} >{props.title}</p>
         <Link css={css`
                 margin: 20px auto;
@@ -138,7 +137,7 @@ export default function Template({
             `} />
             <Leftpanel image={frontmatter.image} text={frontmatter.shorttext} title={frontmatter.title} />
             <Maparea>
-                <iframe title={frontmatter.image} src={frontmatter.storymapurl}
+                <iframe title={frontmatter.image} src={'storymaps/' + frontmatter.image + '.html'}
                     css={css`
                         width: 100%;
                         height: 100%;
