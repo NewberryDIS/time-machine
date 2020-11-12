@@ -93,6 +93,7 @@ export const xmas = {
 }
 export const Travelers = [ 
 	// xmas, 
+	thx,
 	juliaNewberry,  
 	blackHawk, 
 	errettGraham,  

@@ -137,7 +137,7 @@ export default function Template({
             `} />
             <Leftpanel image={frontmatter.image} text={frontmatter.shorttext} title={frontmatter.title} />
             <Maparea>
-                <iframe title={frontmatter.image} src={'/static/' + frontmatter.image + '.html'}
+                <iframe title={frontmatter.image} src={'/time-machine/static/' + frontmatter.image + '.html'}
                     css={css`
                         width: 100%;
                         height: 100%;
