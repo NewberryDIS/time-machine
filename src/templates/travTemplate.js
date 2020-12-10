@@ -18,7 +18,8 @@ import jhMageepic from '../images/tm-jhMagee.png';
 import eraBellThompsonpic from '../images/tm-eraBellThompson.png';
 import rasterpic from '../images/tm-raster.png';
 import cgPearce from '../images/tm-cgPearce.png';
-import thxpic from '../images/tm-thx.png';
+// import thxpic from '../images/tm-thx.png';
+import xmaspic from '../images/tm-xmas.png';
 
 // const colors = {
 //     green: {
@@ -48,7 +49,8 @@ const images = {
     'eraBellThompson': eraBellThompsonpic,
     'cgPearce': cgPearce,
     'raster': rasterpic,
-    'thx': thxpic,
+    'xmas': xmaspic,
+    // 'thx': thxpic,
 }
 const Maparea = styled.div` 
     position: sticky;

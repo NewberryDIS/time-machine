@@ -92,8 +92,8 @@ export const xmas = {
 	dest: 'Holiday bonus!'
 }
 export const Travelers = [ 
-	// xmas, 
-	thx,
+	xmas, 
+	// thx,
 	juliaNewberry,  
 	blackHawk, 
 	errettGraham,  

@@ -44,24 +44,36 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Lato`,
-            variants: [`100i`,`300i`,`400`]
-          },
-          {
-            family: `Hepta Slab`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `Ultra`,
-            variants: [`400`, `700`]
-          },
+          `lato\:100i,300i,400`,
+          `hepta slab\:400,700`,
+          `ultra\:400,700`,
+          // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
-      },
-    }
+        display: 'swap'
+      }
+    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Lato`,
+    //         variants: [`100i`,`300i`,`400`]
+    //       },
+    //       {
+    //         family: `Hepta Slab`,
+    //         variants: [`400`, `700`]
+    //       },
+    //       {
+    //         family: `Ultra`,
+    //         variants: [`400`, `700`]
+    //       },
+    //     ],
+    //   },
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
