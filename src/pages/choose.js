@@ -6,7 +6,7 @@ import { Travelers } from '../components/data';
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Footer from '../components/footer'; 
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import '../components/layout.css'
 
@@ -23,13 +23,14 @@ import cgPearce from '../images/tm-cgPearce.png';
 // import thx from '../images/tm-thx.png';
 import xmas from '../images/tm-xmas.png';
 import raster from '../images/tm-raster.png';
+import estherBubley from '../images/tm-estherBubley.png';
 import noone from '../images/noone.png';
 import wpc from '../images/time-machine-splash-background.jpg';
 import paper from '../images/paper.png';
 import TwitterButton from '../components/twitter';
 
 
-let breakPoints = [350, 500, 750, 1050];
+let breakPoints = [350, 500, 750];
 const images = {
     'amyWingreen': amyWingreen,
     'blackHawk': blackHawk,
@@ -42,6 +43,7 @@ const images = {
     'noone': noone,
     'raster': raster,
     'eraBellThompson': eraBellThompson,
+    'estherBubley': estherBubley,
     // 'thx': thx
     // 'xmas': xmas
 };

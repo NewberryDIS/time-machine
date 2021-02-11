@@ -66,6 +66,13 @@ export const wolfej = {
 	name: 'The DIS Queen: Jen Slow Wolfe',
 	desc: 'A graphic representation of data abstracted from the Chinese program’s semiotics, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct reflection.'
 }
+export const bubley = {
+	image: 'estherBubley',
+	name: 'The Photojournalist: Esther Bubley',
+	desc: 'Ride the CB&Q Railroad around the Midwest to document everyday life along its route.',
+	storymapurl: 'https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/bubley/index.html',
+	dest: 'May-June, 1948'
+}
 export const transcription = {
 	image: 'noone',
 	name: 'Discover a new journey!',
@@ -95,6 +102,7 @@ export const Travelers = [
 	// xmas, 
 	// thx,
 	juliaNewberry,  
+	bubley,
 	blackHawk, 
 	errettGraham,  
 	eraBellThompson,  
