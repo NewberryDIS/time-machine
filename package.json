@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "time-machine",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Newberry's Midwest Time Machine",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nicolas White <whiten@newberry.org>",
+  "homepage": "https://publications.newberry.org/time-machine/",
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",

@@ -43,7 +43,7 @@ const images = {
     'raster': raster,
     'eraBellThompson': eraBellThompson,
     // 'thx': thx
-    'xmas': xmas
+    // 'xmas': xmas
 };
 const Masonrycontainer = styled.div`
     width: 85%;
