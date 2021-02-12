@@ -269,7 +269,7 @@ export default class Choose extends React.Component {
             `}></div>
                 <Masonrycontainer>
                         <Masonry breakPoints={breakPoints}>
-                            {Travelers.map((content, i) => content.button ? <OutboundLink css={tileCss} key={i} href="//publications.newberry.org/digital/mms-transcribe/index" target="_blank">  <Tile content={content}  /></OutboundLink> : <Link key={i} css={tileCss} to={'/' + content.image}>  <Tile content={content}  /></Link>)}
+                            {Travelers.map((content, i) => content.button ? <OutboundLink css={tileCss} key={i} href="//publications.newberry.org/transcribe" target="_blank" ref="noopener">  <Tile content={content}  /></OutboundLink> : <Link key={i} css={tileCss} to={'/' + content.image}>  <Tile content={content}  /></Link>)}
                         </Masonry>
                 </Masonrycontainer>
                 <Footer />

@@ -199,7 +199,7 @@ const Main  = props => (
                 <Text className="text">Witness the Chicago Fire, join the Lewis and Clark expedition, and marvel at the World's Fair through manuscripts transcribed by our online volunteers!</Text>
                 <Link to="/choose/" className="chooseButton">Choose Your Time Traveler</Link>
                 <div className="ortext"><span>or</span></div>
-                <OutboundLink className="transcribeButton"  href="https://publications.newberry.org/digital/mms-transcribe/index" target="_blank" rel="noopener noreferrer">Unlock more stories from the past at our transcription crowdsourcing project:<br/>NEWBERRY TRANSCRIBE</OutboundLink>
+                <OutboundLink className="transcribeButton"  href="https://publications.newberry.org/transcribe" target="_blank" rel="noopener noreferrer">Unlock more stories from the past at our transcription crowdsourcing project:<br/>NEWBERRY TRANSCRIBE</OutboundLink>
             </div>
             <CirclePanel>
                 <CircleImage src={ blackHawk } alt=""/>

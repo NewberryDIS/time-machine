@@ -18,6 +18,7 @@ import jhMageepic from '../images/tm-jhMagee.png';
 import eraBellThompsonpic from '../images/tm-eraBellThompson.png';
 import rasterpic from '../images/tm-raster.png';
 import cgPearce from '../images/tm-cgPearce.png';
+import estherBubleypic from '../images/tm-estherBubley.png';
 // import thxpic from '../images/tm-thx.png';
 import xmaspic from '../images/tm-xmas.png';
 
@@ -49,6 +50,7 @@ const images = {
     'eraBellThompson': eraBellThompsonpic,
     'cgPearce': cgPearce,
     'raster': rasterpic,
+    'estherBubley': estherBubleypic,
     'xmas': xmaspic,
     // 'thx': thxpic,
 }
