@@ -1,213 +1,283 @@
+import React from 'react';
 /** @jsx jsx */
 import { css, jsx, Global } from '@emotion/core';
 import styled from "@emotion/styled";
+import { Travelers } from '../components/data';
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Navbar from '../components/navbar';
-import wpc from '../images/time-machine-splash-background.jpg';
-import eraBellThompson from '../images/tm-eraBellThompson.png';
+import Footer from '../components/footer'; 
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import '../components/layout.css'
+
+import Splash from '../components/splash'
+
+// images
+import amyWingreen from '../images/tm-amyWingreen.png';
 import blackHawk from '../images/tm-blackHawk.png';
 import errettGraham from '../images/tm-errettGraham.png';
+import josephWhitehouse from '../images/tm-josephWhitehouse.png';
 import juliaNewberry from '../images/tm-juliaNewberry.png';
-import '../components/layout.css'
+import jhMagee from '../images/tm-jhMagee.png';
+import eraBellThompson from '../images/tm-eraBellThompson.png';
+import wolfej from '../images/wolfej.png';
+import cgPearce from '../images/tm-cgPearce.png';
+// import thx from '../images/tm-thx.png';
+import xmas from '../images/tm-xmas.png';
+import raster from '../images/tm-raster.png';
+import estherBubley from '../images/tm-estherBubley.png';
+import noone from '../images/noone.png';
+import wpc from '../images/time-machine-splash-background.jpg';
+import paper from '../images/paper.png';
 import TwitterButton from '../components/twitter';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-const Text  = styled.div`
-    font-family: 'Lato', sans-serif;
-    font-size: calc(1vw + 15px);
-    padding: 15px 30px ;
+
+let breakPoints = [350, 500, 750];
+const images = {
+    'amyWingreen': amyWingreen,
+    'blackHawk': blackHawk,
+    'errettGraham': errettGraham,
+    'josephWhitehouse': josephWhitehouse,
+    'juliaNewberry': juliaNewberry,
+    'wolfej': wolfej,
+    'cgPearce': cgPearce,
+    'jhMagee': jhMagee,
+    'noone': noone,
+    'raster': raster,
+    'eraBellThompson': eraBellThompson,
+    'estherBubley': estherBubley,
+    // 'thx': thx
+    // 'xmas': xmas
+};
+const Masonrycontainer = styled.div`
+    width: 85%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 4px;
+    color: #efefef;
 `
-const Title  = styled.p`
-    font-family: 'Hepta Slab',serif;
-    font-weight: 900;
-    margin: 0;
-    filter: drop-shadow(0 0 0.25rem #000);
-    color: #fff;
-    text-shadow:
-        -1px -1px 0 #000,  
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    &.upper {
-        font-size: calc(7vw + 20px);
-        line-height: calc(5vw);
-    }
-    &.lower {
-        font-size: calc(4vw + 12px);
-        margin: 0 0 10px 0;
-        line-height: calc(4vw + 12px);;
-    }
+const Masonrycss = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    width: 100%;
+    margin: auto;
 `
-const Splash = styled.div`
-    margin: 100px auto;
-    padding: 30px;
-    width: 80%;
-    @media (min-width: 967px) {width: 60%;} 
-    border-radius: 3px;                        
-    border: 2px solid rgba(0,0,0,1); 
-    background: rgba(255,255,255,0.85);
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-basis: 235px;
+    // width: 235px;
+`
+class Masonry extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { columns: 1 };
+        this.onResize = this.onResize.bind(this);
+    }
+    componentDidMount() {
+        this.onResize();
+        window.addEventListener('resize', this.onResize);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.onResize);
+    }
+    getColumns(w) {
+        return breakPoints.reduceRight((p, c, i) => {
+            return c < w ? p : i;
+        }, breakPoints.length) + 1;
+    }
+    onResize() {
+        const columns = this.getColumns(this.refs.Masonry.offsetWidth);
+        if (columns !== this.state.columns) {
+            this.setState({ columns: columns });
+        }
+    }
+    mapChildren() {
+        let col = [];
+        const numC = this.state.columns;
+        for (let i = 0; i < numC; i++) {
+            col.push([]);
+        }
+        return this.props.children.reduce((p, c, i) => {
+            p[i % numC].push(c);
+            return p;
+        }, col);
+    }
+    render() {
+        return (
+        <Masonrycss className="masonry" ref="Masonry">
+            {this.mapChildren().map((col, ci) => 
+                <Column className="column" key={ci}>
+                    {col.map((child, i) => 
+                        <div key={i}>{child}</div>
+                    )}              
+                </Column>
+                )}
+        </Masonrycss>
+        )
+    }
+}
+
+const tileCss = () => css`text-decoration: none;`
+const buttoncss = () => css`
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 15px auto;
+    background: rgba(0,0,0,1);;
+    background-image: url(${paper});
+    color:  rgba(255,255,255,0.75);
+    font-family: 'Hepta Slab', serif;   
+    font-size: 0.9rem;
+    border-radius: 6px; 
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    // font-weight: 900;
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-    position: relative;
-    .splashleft {
-        width: calc(100% - 80px);
-        @media (max-width: 800px) {width: 100%;} 
-    }
-    .chooseButton {
-        display: block;
-        margin: 15px auto;
-        padding: 13px 20px;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Hepta Slab',serif;
-        font-weight: 900;
-        background: #000;
-        color:  rgba(255,255,255,0.75);
-        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        border-radius: 6px; 
-        border: 1px solid rgba(0,0,0, 0.5);
-        &:hover {
-            border: 1px solid #000;
-            background-color: #fff;
-            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-            text-shadow: none;
-            color: #000;
-        }
-        text-shadow:
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-    }
-    .transcribeButton {
-        display: block;
-        font-family: 'Lato', sans-serif;
-        font-size: 1rem;
+    transition: all .15s ease-in-out;
+    &:hover {
+        background: white;
         color: black;
-        text-decoration: none;
-        padding: 15px 30px ;
-        border: 1px solid rgba(0,0,0, 0.5);
-        &:hover {
-            border: 1px solid #000;
-            background-color: #fff;
-            box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        }
-        background: rgba(255,255,255,0.8);
-        border-radius: 6px; 
-        flex-basis: 1rem;
-        text-align: center;
-        flex-shrink: 0;
+        font-weight: 700;
+        border: 1px solid black;
+        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
+        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.95);
     }
-    .ortext {
+
+`
+
+const Tile = ({ content }) => 
+    <div className="tile" css={css`
+    * {text-decoration: none;}
+        text-decoration: none;
         display: block;
-        text-align: center;
-        overflow: hidden;
-        white-space: nowrap; 
-        span {
-            position: relative;
-            display: inline-block;
-            font-family: 'Hepta Slab',serif;
-            text-transform: uppercase;
-            font-style: italic;
+        background: rgba(255,255,255,0.5);
+        // background: rgba(255,255,255,0.85);
+        background-attachment: fixed;
+        background-position: center;
+        color: #000;
+        margin: 4px;
+        border: 2px solid #27452B;
+        flex-basis: 200px;
+        border-radius: 6px;
+        padding: 10px 10px 25px 10px;
+        position: relative;
+        transition: all .15s ease-in-out;
+        & p {
+            padding: 5px 10px 15px 10px;
         }
-        span:before,
-        span:after {
+        &:before {
             content: "";
             position: absolute;
-            top: 50%;
-            width: 9999px;
-            height: 1px;
-            background: black;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
         }
-        span:before {
-            right: 100%;
-            margin-right: 15px;
-        }
-        span:after {
-            left: 100%;
-            margin-left: 15px;
-        }
-    }
-    
-`
-const CirclePanel = styled.div`
-    position: absolute;
-    display: flex;
-    // jen's alleged disappearing circlefaces 
-    // flex-wrap: wrap;
-    @media (min-width: 800px) {
-        justify-content: flex-start;
-        flex-direction: column;
-        right: -75px;
-        top: 0;
-    } 
-    @media (max-width: 800px) {
-        justify-content: space-between;
-        flex-direction: row;
-        bottom: -150px;
-        left: 0;
-    } 
-`
-const CircleImage = styled.img`
-    flex: 1;
-    filter: drop-shadow(0 0 0.75rem #000);
-    &:hover {
-        filter: drop-shadow(0 0 1rem #000);
-    }
-    @media (min-width: 800px) {
-        width: 150px;
-        height: 150px;
-    } 
-    @media (max-width: 800px) {
-        width: calc(100% / 5);
-    } 
-
-`
-const Main  = props => (
-    <div >
-        <Helmet>
-            <meta charSet="utf-8" />
-            <title>Newberry's Midwest Time Machine</title>
-        </Helmet>
-        <Global styles={css`
-        * {
-            transition: all .15s ease-in-out;
-        }
-        body {
-            margin: 0;
-            background: url('${wpc}');
-            background-size: cover;
-            background-position: center;
+        &:hover {
+            background: #fff;
             background-attachment: fixed;
+            background-position: center;
+            & .tilecap {
+                color: rgba(255,255,255,1);
+            }
         }
-        .pageWrapper {
-            position: relative;
+        & h2 {
+            font-size: calc(12px + 1.1vw);
+            padding: 0;
+            margin: 0;
+            overflow-wrap: normal;
         }
-        `} />
-        <Navbar location={props.location} />
-        <TwitterButton />
-        <Splash>
-            <div className="splashleft">
-                <Title className="upper">
-                    Midwest
-                </Title>
-                <Title className="lower">
-                    Time Machine
-                </Title>
-                <Text className="text">Travel to the past via first-hand accounts from letters, diaries, and rare books in the Newberry's collections</Text>
-                <Text className="text">Witness the Chicago Fire, join the Lewis and Clark expedition, and marvel at the World's Fair through manuscripts transcribed by our online volunteers!</Text>
-                <Link to="/choose/" className="chooseButton">Choose Your Time Traveler</Link>
-                <div className="ortext"><span>or</span></div>
-                <OutboundLink className="transcribeButton"  href="https://publications.newberry.org/transcribe" target="_blank" rel="noopener noreferrer">Unlock more stories from the past at our transcription crowdsourcing project:<br/>NEWBERRY TRANSCRIBE</OutboundLink>
-            </div>
-            <CirclePanel>
-                <CircleImage src={ blackHawk } alt=""/>
-                <CircleImage src={ errettGraham } alt=""/>
-                <CircleImage src={ eraBellThompson } alt=""/>
-                <CircleImage src={ juliaNewberry } alt=""/>
-            </CirclePanel>
-        </Splash>
+        & .tilecap, .tilecapSeasonal {
+            font-family: 'Lato', sans-serif;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            font-weight: 700;
+            border-radius: 6px 6px 0 0;
+            color: rgba(255,255,255,0.75);
+            background-image: url(${paper});
+        }
+        & .tilecap {
+            background: ${content.button ? '#284883' : '#641818' };
+            border: 2px solid #27452B;
+            border-bottom: 2px solid transparent;
+        }
+        & .tilecapSeasonal {
+            color: white;
+            background: ${content.capcolor};
+            line-height: 52px;
+            border: 2px solid #27452B;
+            border-bottom: 2px solid transparent;
+        }
+    `}>
+        {content.type === 'seasonal' ? 
+            <div className="tilecapSeasonal">{content.dest}</div>
+            : <div className="tilecap">Destination:<br />{content.dest}</div>}
+        <img css={css`
+                padding: 55px 25px 5px 25px;
+                width: 150px;
+                filter: drop-shadow(0 0 0.75rem #000);
+            `} 
+            src={images[content['image']]} alt="person"/>
+        <h2 css={css`font-family: 'Hepta Slab', serif;`}>{content.name}</h2>
+        <p css={css`font-family: 'Lato', sans-serif;`}>{content.desc}</p>
+        <button css={buttoncss} >{content.button ? content.button : 'Begin your journey'}</button>
     </div>
-)
-export default Main
+
+export default class Choose extends React.Component {
+    render() {
+        return ( <div css={css`padding-top: 65px;`}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Newberry's Midwest Time Machine</title>
+            </Helmet>
+                <Global styles={css`
+                @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:300,400,700|Lato:300,400,700&display=swap');
+                body {
+                    margin: 0;
+                    background: url('${wpc}');
+                    // background-position: center;
+                    background-size: cover;
+                }
+            `}/>
+            <Navbar location={this.props.location} />
+            <Splash />
+            <a id="main" />
+            <TwitterButton />
+            <div className="container" css={css`
+                background-image: url('${wpc}');
+                background-size: cover;
+                position: fixed;
+                overflow: hidden;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+                
+            `}></div>
+                <Masonrycontainer>
+                        <Masonry breakPoints={breakPoints}>
+                            {Travelers.map((content, i) => content.button ? <OutboundLink css={tileCss} key={i} href="//publications.newberry.org/transcribe" target="_blank" ref="noopener">  <Tile content={content}  /></OutboundLink> : <Link key={i} css={tileCss} to={'/' + content.image}>  <Tile content={content}  /></Link>)}
+                        </Masonry>
+                </Masonrycontainer>
+                <Footer />
+            </div>
+        )
+    }
+}

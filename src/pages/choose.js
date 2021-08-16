@@ -10,6 +10,8 @@ import Footer from '../components/footer';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import '../components/layout.css'
 
+import Splash from '../components/splash'
+
 // images
 import amyWingreen from '../images/tm-amyWingreen.png';
 import blackHawk from '../images/tm-blackHawk.png';
@@ -254,6 +256,8 @@ export default class Choose extends React.Component {
                 }
             `}/>
             <Navbar location={this.props.location} />
+            <Splash />
+            <a id="main" />
             <TwitterButton />
             <div className="container" css={css`
                 background-image: url('${wpc}');
