@@ -22,7 +22,7 @@ import jhMagee from '../images/tm-jhMagee.png';
 import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
 import cgPearce from '../images/tm-cgPearce.png';
-// import thx from '../images/tm-thx.png';
+import thx from '../images/tm-thx.png';
 import xmas from '../images/tm-xmas.png';
 import raster from '../images/tm-raster.png';
 import estherBubley from '../images/tm-estherBubley.png';
@@ -46,8 +46,8 @@ const images = {
     'raster': raster,
     'eraBellThompson': eraBellThompson,
     'estherBubley': estherBubley,
-    // 'thx': thx
-    // 'xmas': xmas
+    'thx': thx,
+    'xmas': xmas
 };
 const Masonrycontainer = styled.div`
     width: 85%;
