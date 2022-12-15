@@ -21,6 +21,7 @@ import juliaNewberry from '../images/tm-juliaNewberry.png';
 import jhMagee from '../images/tm-jhMagee.png';
 import eraBellThompson from '../images/tm-eraBellThompson.png';
 import wolfej from '../images/wolfej.png';
+import sherwoodAnderson from '../images/tm-sherwoodAnderson.png';
 import cgPearce from '../images/tm-cgPearce.png';
 import thx from '../images/tm-thx.png';
 import xmas from '../images/tm-xmas.png';
@@ -39,6 +40,7 @@ const images = {
     'errettGraham': errettGraham,
     'josephWhitehouse': josephWhitehouse,
     'juliaNewberry': juliaNewberry,
+    'sherwoodAnderson': sherwoodAnderson,
     'wolfej': wolfej,
     'cgPearce': cgPearce,
     'jhMagee': jhMagee,
