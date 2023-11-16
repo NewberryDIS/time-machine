@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@egjs/svelte-grid": "^1.14.2",
 		"@sveltejs/adapter-static": "^2.0.2",
 		"bigger-picture": "^1.1.11"
 	}

@@ -5,8 +5,8 @@
 	// import '$sm/storymap.css';
 
 	export let data;
-	let storymapData = data.storymapData;
-	let person = data.person;
+	const{ storymapData, person } = data
+	// let person = data.person;
 
 	let storymap,
 		astorymapData,

@@ -1,9 +1,9 @@
+
 <script>
 import { MasonryGrid } from "@egjs/svelte-grid";
 import { base } from '$app/paths';
 import * as data from '$data/data';
 import Footer from '$comps/footer.svelte';
-// console.log(data)
 const content = Object.values(data)
 .map((d) => d)
 .filter((f) => {
@@ -16,10 +16,9 @@ const content = Object.values(data)
     } else {
         return true;
     }
-    // this is just a reverse sort because the holidays just happen to come in at the end of the alphabetical list;
-    // if that changes, you're going to have to do a real sort
-}).sort((a, b) => a.image > b.image ? -1 : 1)
-// console.log(content)
+});
+// console.log("content", Object.values(data).filter(f=> f.capcolor).map(c => c.capcolor))
+console.log(content)
 </script>
 
 <div class="jumbo">
@@ -35,7 +34,6 @@ const content = Object.values(data)
     </p>
     <a href="#choose" class="btn-link">Choose your time traveler</a>
 </div>
-    <div id="choose" />
 <MasonryGrid
     class="cards"
     gap={5}
@@ -85,27 +83,12 @@ const content = Object.values(data)
 <style>
     :global(.cards) {
         position: relative;
-        /* width: 60%; */
+        width: 60%;
         margin: 16px auto;
         /* overflow: hidden; */
         /* display: grid; */
         /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
         /* gap: 1rem; */
-    }
-    @media (max-width: 1000px){
-        :global(.cards){
-            width: 90%;
-        }
-    }
-    @media (min-width: 1001px) and (max-width: 1600px){
-        :global(.cards){
-            width: 80%;
-        }
-    }
-    @media (min-width: 1601px){
-        :global(.cards){
-            width: 1200px;
-        }
     }
     .card {
         width: 250px;
