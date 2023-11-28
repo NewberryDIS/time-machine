@@ -2,6 +2,7 @@
 import { MasonryGrid } from "@egjs/svelte-grid";
 import { base } from '$app/paths';
 import * as data from '$data/data';
+import { hasThanksgivingPassed, hasChristmasPassed } from '$lib'
 import Footer from '$comps/footer.svelte';
 // console.log(data)
 const content = Object.values(data)
@@ -11,8 +12,10 @@ const content = Object.values(data)
         return false;
     } else if (f.type === 'seasonal') {
         let now = new Date();
-        return (f.image === 'xmas' && now.getMonth() === 11) ||
-                (f.image === 'thx' && now.getMonth() === 10)
+        return ( f.image === 'xmas' &&  (
+                ( now.getMonth() === 11 && !hasChristmasPassed() ) || 
+                ( now.getMonth() === 10 && hasThanksgivingPassed() ) ) ) ||
+            ( f.image === 'thx' && now.getMonth() === 10 && !hasThanksgivingPassed() )
     } else {
         return true;
     }
