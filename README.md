@@ -8,4 +8,4 @@ This project is a series of StoryMaps (see [KnightLab's StoryMaps](https://story
 
 A series of StoryMaps using personal writings of historic figures.
 
-Uses React (~~CRA~~ Gatsby) and Emotion.  
+Uses ~~React (CRA/Gatsby) and Emotion~~ Svelte.  

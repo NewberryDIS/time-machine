@@ -2,7 +2,7 @@ export const thx = {
   type: "seasonal",
   capcolor: "park-green",
   image: "thx",
-  name: "Thanksgiving in Letters, 1849-1904",
+  name: "Thanksgiving in Letters, 1849-1968",
   desc: "Dine with a homesick college girl, a Civil War Soldier, the new father of a “Thanksgiving baby,” and others.",
   storymapurl:
     "https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/thanksgiving/index.html",
@@ -111,6 +111,13 @@ export const estherBubley = {
   storymapurl:
     "https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/bubley/index.html",
   dest: "May-June, 1948",
+};
+export const mayWalden = {
+  image: "mayWalden",
+  name: "The Activist: May Walden",
+  desc: "Converse with left wing activists and tackle domestic life during the Great Depression.",
+  storymapurl: "https://uploads.knightlab.com/storymapjs/bc2171fd2dc65da8b99c6c013d2dc670/may-walden/index.html",
+  dest: "1908-1954"
 };
 export const transcription = {
   image: "noone",
